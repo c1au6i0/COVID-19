@@ -1,0 +1,10 @@
+name: covid-19
+title:
+username:
+account: rden
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1952882
+bundleId: 2885226
+url: https://rden.shinyapps.io/covid-19/
+when: 1584332304.23526
