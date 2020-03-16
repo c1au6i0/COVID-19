@@ -98,8 +98,9 @@ plot_tested <- function(dat = tests) {
       separate(date_collected, sep = -5, into = c("y", "m_d")) %>% 
       mutate(group = 1)
      
+    n_date <- length(unique(tests$m_d))
    
-    breaks <- unique(tests$m_d)[seq(1, length(unique(tests$m_d)), 10)]
+    breaks <- unique(tests$m_d)[seq(1, n_date, ceiling(n_date/5))]
     
     p <- tests %>% 
       ggplot(aes(x = m_d, y = tot, group = group), color = "black") +
@@ -137,11 +138,15 @@ plot_cases <- function(dat , state = c("Maryland", "California"), cases = "Confi
     dat_f <- dat_f %>% 
       separate(date, sep = -5, into = c("y", "m_d"))
     
+    n_date <- length(unique(dat_f$m_d))
+    
+    breaks <- unique(dat_f$m_d)[seq(1, n_date, ceiling(n_date/5))]
+    
     p <- dat_f %>% 
       ggplot(aes(x = as.character(m_d), y = cases, fill = state, shape = state, group = state),color = "black") +
       geom_point(size = 2, stroke = 0.2) +
       geom_line(show.legend = FALSE, size = 0.2) +
-      scale_x_discrete() +
+      scale_x_discrete(breaks = breaks) +
       scale_shape_manual(values = shapes_plot) +
       scale_fill_manual(values = cbPalette) +
       scale_alpha(guide = 'none') +
