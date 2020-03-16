@@ -5,6 +5,7 @@ library(rvest)
 library(htmlwidgets)
 library(janitor)
 library(leaflet)
+library(lemon)
 library(plotly)
 library(shiny)
 library(shinydashboard)
@@ -112,8 +113,8 @@ plot_tested <- function(dat = tests) {
       theme_bw() +
       theme(legend.title = element_blank(),
             legend.position = "top",
-            axis.text.x = element_text(angle = 45, hjust = 1)) 
-    p <- ggplotly(p) 
+            axis.text.x = element_text( hjust = 1)) 
+    p <- ggplotly(p, tooltip = c("y", "x", "shape")) 
     p
 }
 
@@ -124,45 +125,52 @@ plot_tested <- function(dat = tests) {
 cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 
 
-plot_cases <- function(dat , state = c("Maryland", "California"), cases = "Confirmed"){
+plot_cases <- function(dat){
   # state <- sym(state)
-    dat_f <- dat %>%
-      filter(state %in%  !!state) %>% 
-      filter(condition == !!cases)
+    # %>% 
+    #   filter(condition == !!cases)
     
-    if(nrow(dat_f) != 0){
+    if(nrow(dat) != 0){
     # shapes of symbols
     shapes_l <- 21:24
-    shapes_plot <- shapes_l[1:length(unique(dat_f$state))]
+    shapes_plot <- shapes_l[1:length(unique(dat$state))]
     
-    dat_f <- dat_f %>% 
+    dat_f <- dat %>% 
+      arrange(date) %>% 
       separate(date, sep = -5, into = c("y", "m_d"))
     
     n_date <- length(unique(dat_f$m_d))
     
+    val <- unique(dat_f$m_d)
+    
     breaks <- unique(dat_f$m_d)[seq(1, n_date, ceiling(n_date/5))]
     
-    p <- dat_f %>% 
+    
+    
+    p <- 
+      dat_f %>% 
       ggplot(aes(x = as.character(m_d), y = cases, fill = state, shape = state, group = state),color = "black") +
       geom_point(size = 2, stroke = 0.2) +
       geom_line(show.legend = FALSE, size = 0.2) +
-      scale_x_discrete(breaks = breaks) +
       scale_shape_manual(values = shapes_plot) +
       scale_fill_manual(values = cbPalette) +
       scale_alpha(guide = 'none') +
       labs(x ="", y = "") +
-      facet_wrap(vars(condition), ncol =  1, scales = "free_y") +
+      facet_wrap(vars(condition), ncol =  1, scales = "free") +
+      scale_x_discrete(breaks = breaks, limits = val) +
       scale_y_continuous(limits = c(0, NA),breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1))))) +
       theme_bw() +
       theme(legend.title = element_blank(),
             legend.position = "top",
             strip.background = element_rect(fill="grey90"),
-            axis.text.x = element_text(angle = 45, hjust = 1))
+            axis.text.x = element_text( hjust = 1))
     
-    p <- ggplotly(p) %>%
-      layout(legend = list(
+    p <- ggplotly(p, tooltip = c("y", "x", "shape")) %>%
+      layout(
+        legend = list(
         orientation = "h")
-      )
+      ) 
+      
     p
     }
 }

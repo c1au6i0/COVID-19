@@ -31,9 +31,9 @@ ui <- dashboardPage(
             selected = c("Maryland", "Texas"),
             multiple = TRUE,
             options = list(maxItems = 4)),
-          plotlyOutput("confirmed", height = "auto"),
-          plotlyOutput("deaths", height = "auto"),
-          plotlyOutput("recovered", height = "auto")
+          
+            uiOutput("body_UI")
+            # plotlyOutput("cases", height = "400px")
         ),
         
         box(
@@ -43,11 +43,11 @@ ui <- dashboardPage(
           br(),
           "Data of spectimen tested from",
           a(href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/testing-in-us.html", "CDC."),
-          hr(style =  " margin-top: 1.1em; margin-bottom: 1.2em;"),
+          hr(style =  " margin-top: 1.1em; margin-bottom: 1.2em;")
           ),
               
           
-          plotlyOutput("tested", height = "auto")
+          plotlyOutput("tested", height = "400px")
           
         )
       )
@@ -60,15 +60,27 @@ ui <- dashboardPage(
 server <- function(input, output, session) {
   
   # # Get data -----
-  dat_US <- reactiveVal()
-  tests <- reactiveVal()
+  
   withProgress(
     message = "retrieving the data...",
     {
-      dat_US(get_cases())
-      tests(get_tests())
-  })
+      dat_US <-  get_cases()
+      tests <- get_tests()
+    })
+
   
+  dat_f <- reactiveVal(NULL)
+ 
+  dat_f <- reactive({
+     x <- input$imp_state
+     dat_US %>%
+       filter(state %in% x)
+   })
+
+  
+
+  
+
   
   
     # license --------
@@ -91,9 +103,19 @@ server <- function(input, output, session) {
       }
     )
     
+  # Last update -----
+  output$updated <- renderText({
+    m_date <- max(dat_f()$date)
+    
+    x <- paste0("Last Update: ", m_date)
+    x
+    
+  })
+  
+  
     # render test plot -----
     output$tested <- renderPlotly({
-        p <- plot_tested(tests())
+        p <- plot_tested(tests)
     })
     
     
@@ -103,26 +125,29 @@ server <- function(input, output, session) {
 
     
     # Render plot_ cases -----
-    output$confirmed <- renderPlotly({
-        plot_cases(dat = dat_US(), state = input$imp_state, cases = "Confirmed")
+    output$cases <- renderPlotly({
+        plot_cases(dat = dat_f())
       })
   
-    output$deaths <- renderPlotly({
-        plot_cases(dat = isolate(dat_US()), state = input$imp_state, cases = "Deaths")
-    })
+  output$body_UI <- renderUI ({
+    n_cond <- length(unique(dat_f()$condition))
     
-    output$recovered <- renderPlotly({
-        plot_cases(dat =  isolate(dat_US()), state = input$imp_state, cases = "Recovered")
-    })
+    if(n_cond == 1) {
+      p <- plotlyOutput("cases", height = "400px")
+    }
+
+  if(n_cond == 2){
+    p <- plotlyOutput("cases", height = "800px")
+  }
+
+  if(n_cond == 3){
+    p <- plotlyOutput("cases", height = "1200px")
+  }
+    p
+  })
+  
     
-    
-    output$updated <- renderText({
-              m_date <- max(dat_US()$date)
-              
-              x <- paste0("Last Update: ", m_date)
-              x
-      
-      })
+
   
     
 }
@@ -130,4 +155,4 @@ server <- function(input, output, session) {
 # Run the application 
 shinyApp(ui = ui, server = server)
 
-
+# https://stackoverflow.com/questions/38826893/shinydashboard-does-not-work-with-uioutput
