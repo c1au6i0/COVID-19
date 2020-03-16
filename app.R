@@ -18,6 +18,11 @@ ui <- dashboardPage(
       ),
       fluidRow(
         box(
+        textOutput("updated")
+        )
+      ),
+      fluidRow(
+        box(
           h2("Total Number of cases"),
           selectizeInput(
             inputId = "imp_state",
@@ -109,6 +114,15 @@ server <- function(input, output, session) {
     output$recovered <- renderPlotly({
         plot_cases(dat =  isolate(dat_US()), state = input$imp_state, cases = "Recovered")
     })
+    
+    
+    output$updated <- renderText({
+              m_date <- max(dat_US()$date)
+              
+              x <- paste0("Last Update: ", m_date)
+              x
+      
+      })
   
     
 }
