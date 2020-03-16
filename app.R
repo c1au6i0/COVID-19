@@ -16,31 +16,36 @@ ui <- dashboardPage(
       shinyDashboardThemes(
         theme = "boe_website"
       ),
-      box(
-        selectizeInput(
-          inputId = "imp_state",
-          label = "Select one or more States (max 4):",
-          choices = as.character(c("US", states)),
-          selected = "Maryland",
-          multiple = TRUE,
-          options = list(maxItems = 4)),
-        plotlyOutput("cases", height = "auto")
-      ),
-      
-      box(
-        h4( "Data of Confirmed, Deaths and Recovered from", 
-        a(href="https://github.com/CSSEGISandData/COVID-19", "JHU."),
-        br(),
-        "Data of spectimen tested from",
-        a(href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/testing-in-us.html", "CDC."),
-        hr(style =  " margin-top: 0.8em; margin-bottom: 0.8em;"),
+      fluidRow(
+        box(
+          h2("Total Number of cases"),
+          selectizeInput(
+            inputId = "imp_state",
+            label = "Select one or more States (max 4):",
+            choices = as.character(c("US", states)),
+            selected = c("Maryland", "Texas"),
+            multiple = TRUE,
+            options = list(maxItems = 4)),
+          plotlyOutput("confirmed", height = "auto"),
+          plotlyOutput("deaths", height = "auto"),
+          plotlyOutput("recovered", height = "auto")
         ),
-            
         
-        plotlyOutput("tested", height = "auto")
-        
+        box(
+          h2("Total Number of Specimens Tested in U.S."),
+          h4( "Data of Confirmed, Deaths and Recovered from", 
+          a(href="https://github.com/CSSEGISandData/COVID-19", "JHU."),
+          br(),
+          "Data of spectimen tested from",
+          a(href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/testing-in-us.html", "CDC."),
+          hr(style =  " margin-top: 1.1em; margin-bottom: 1.2em;"),
+          ),
+              
+          
+          plotlyOutput("tested", height = "auto")
+          
+        )
       )
-
         
     )
         
@@ -93,10 +98,17 @@ server <- function(input, output, session) {
 
     
     # Render plot_ cases -----
-    output$cases <- renderPlotly({
-        
-        plot_cases(dat = dat_US(), state = input$imp_state)
+    output$confirmed <- renderPlotly({
+        plot_cases(dat = dat_US(), state = input$imp_state, cases = "Confirmed")
       })
+  
+    output$deaths <- renderPlotly({
+        plot_cases(dat = isolate(dat_US()), state = input$imp_state, cases = "Deaths")
+    })
+    
+    output$recovered <- renderPlotly({
+        plot_cases(dat =  isolate(dat_US()), state = input$imp_state, cases = "Recovered")
+    })
   
     
 }

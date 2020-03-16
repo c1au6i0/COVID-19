@@ -22,7 +22,7 @@ library(vroom)
 # Get data ------
 states <- c("Washington", "New York", "California", "Massachusetts", "Georgia", "Colorado", "Florida", "New Jersey",
             "Oregon", "Texas", "Illinois", "Pennsylvania", "Iowa", "Maryland",
-            "North Carolina", "South Carolina", "Tennessee", "Virginia",
+            "North Carolina", "South Carolina", "Tennessee", "West Virginia", "Virginia",
             "Arizona", "Indiana", "Kentucky", "District of Columbia", "Nevada",
             "New Hampshire", "Minnesota", "Nebraska", "Ohio", "Rhode Island",
             "Wisconsin", "Connecticut", "Hawaii", "Oklahoma", "Utah")
@@ -41,7 +41,7 @@ get_cases <- function(){
   states <- c("Washington", "New York", "California", "Massachusetts", "Diamond Princess",
               "Grand Princess", "Georgia", "Colorado", "Florida", "New Jersey",
               "Oregon", "Texas", "Illinois", "Pennsylvania", "Iowa", "Maryland",
-              "North Carolina", "South Carolina", "Tennessee", "Virginia",
+              "North Carolina", "South Carolina", "Tennessee", "West Virginia", "Virginia",
               "Arizona", "Indiana", "Kentucky", "District of Columbia", "Nevada",
               "New Hampshire", "Minnesota", "Nebraska", "Ohio", "Rhode Island",
               "Wisconsin", "Connecticut", "Hawaii", "Oklahoma", "Utah")
@@ -100,8 +100,7 @@ plot_tested <- function(dat = tests) {
       ggplot(aes(x = date_collected, y = tot), color = "black") +
       geom_line(show.legend = FALSE, size = 0.2) +
       geom_point(size = 2, stroke = 0.2, fill = "#999999", shape = 21) +
-      labs(x ="", y = "", 
-           title = "Total number of specimens tested in U.S.") +
+      labs(x ="", y = "") +
       scale_x_date(guide = guide_axis(n.dodge = 2)) +
       scale_y_continuous(limits = c(0, ceiling(max(tests$tot)/5000) *5000)) +
       theme_bw() +
@@ -111,16 +110,20 @@ plot_tested <- function(dat = tests) {
     p
 }
 
+
+
 # Plot infected-----
 
 cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 
 
-plot_cases <- function(dat , state = c("Maryland", "California")){
+plot_cases <- function(dat , state = c("Maryland", "California"), cases = "Confirmed"){
   # state <- sym(state)
     dat_f <- dat %>%
-      filter(state %in%  !!state) 
+      filter(state %in%  !!state) %>% 
+      filter(condition == !!cases)
     
+    if(nrow(dat_f) != 0){
     # shapes of symbols
     shapes_l <- 21:24
     shapes_plot <- shapes_l[1:length(unique(dat_f$state))]
@@ -133,8 +136,7 @@ plot_cases <- function(dat , state = c("Maryland", "California")){
       scale_shape_manual(values = shapes_plot) +
       scale_fill_manual(values = cbPalette) +
       scale_alpha(guide = 'none') +
-      labs(x ="", y = "",
-           title = "Total number of cases") +
+      labs(x ="", y = "") +
       facet_wrap(vars(condition), ncol =  1, scales = "free_y") +
       scale_y_continuous(limits = c(0, NA),breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1))))) +
       theme_bw() +
@@ -146,7 +148,7 @@ plot_cases <- function(dat , state = c("Maryland", "California")){
       layout(legend = list(
         orientation = "h"
       ))
-    p
+    p}
 }
 
 
