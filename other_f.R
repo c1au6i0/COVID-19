@@ -20,14 +20,20 @@ library(vroom)
 
 
 # Get data ------
-states <- c("Washington", "New York", "California", "Massachusetts", "Georgia", "Colorado", "Florida", "New Jersey",
-            "Oregon", "Texas", "Illinois", "Pennsylvania", "Iowa", "Maryland",
-            "North Carolina", "South Carolina", "Tennessee", "West Virginia", "Virginia",
-            "Arizona", "Indiana", "Kentucky", "District of Columbia", "Nevada",
-            "New Hampshire", "Minnesota", "Nebraska", "Ohio", "Rhode Island",
-            "Wisconsin", "Connecticut", "Hawaii", "Oklahoma", "Utah")
+states <- c("Washington", "New York", "California", "Massachusetts", "Diamond Princess", 
+            "Grand Princess", "Georgia", "Colorado", "Florida", "New Jersey", 
+            "Oregon", "Texas", "Illinois", "Pennsylvania", "Iowa", "Maryland", 
+            "North Carolina", "South Carolina", "Tennessee", "Virginia", 
+            "Arizona", "Indiana", "Kentucky", "District of Columbia", "Nevada", 
+            "New Hampshire", "Minnesota", "Nebraska", "Ohio", "Rhode Island", 
+            "Wisconsin", "Connecticut", "Hawaii", "Oklahoma", "Utah", "Kansas", 
+            "Louisiana", "Missouri", "Vermont", "Alaska", "Arkansas", "Delaware", 
+            "Idaho", "Maine", "Michigan", "Mississippi", "Montana", "New Mexico", 
+            "North Dakota", "South Dakota", "West Virginia", "Wyoming", "Alabama", 
+            "Puerto Rico", "Virgin Islands, U.S.", "Guam")
+
 get_cases <- function(){
-  
+
   COVID <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-"
   dat <- map_dfr(list("Confirmed", "Deaths", "Recovered"), function(x){
     
@@ -38,17 +44,9 @@ get_cases <- function(){
   })
   
   # Clean data -----
-  states <- c("Washington", "New York", "California", "Massachusetts", "Diamond Princess",
-              "Grand Princess", "Georgia", "Colorado", "Florida", "New Jersey",
-              "Oregon", "Texas", "Illinois", "Pennsylvania", "Iowa", "Maryland",
-              "North Carolina", "South Carolina", "Tennessee", "West Virginia", "Virginia",
-              "Arizona", "Indiana", "Kentucky", "District of Columbia", "Nevada",
-              "New Hampshire", "Minnesota", "Nebraska", "Ohio", "Rhode Island",
-              "Wisconsin", "Connecticut", "Hawaii", "Oklahoma", "Utah")
-  
   dat_US <-  dat %>%
     rename(state = `Province/State`, country = `Country/Region`) %>%
-    filter(state %in% states ) %>%
+    filter(country %in% "US" ) %>%
     pivot_longer(6: ncol(dat), names_to = "date", values_to = "cases") %>%
     mutate(date  = lubridate::mdy(date))
   
