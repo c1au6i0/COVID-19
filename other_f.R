@@ -94,16 +94,24 @@ plot_tested <- function(dat = tests) {
     
     tests[, "tot"] <- cumsum(tests$d_test)
     
+    tests <- tests %>% 
+      separate(date_collected, sep = -5, into = c("y", "m_d")) %>% 
+      mutate(group = 1)
+     
+   
+    breaks <- unique(tests$m_d)[seq(1, length(unique(tests$m_d)), 10)]
+    
     p <- tests %>% 
-      ggplot(aes(x = date_collected, y = tot), color = "black") +
+      ggplot(aes(x = m_d, y = tot, group = group), color = "black") +
       geom_line(show.legend = FALSE, size = 0.2) +
       geom_point(size = 2, stroke = 0.2, fill = "#999999", shape = 21) +
       labs(x ="", y = "") +
-      scale_x_date(guide = guide_axis(n.dodge = 2)) +
+      scale_x_discrete(breaks = breaks) +
       scale_y_continuous(limits = c(0, ceiling(max(tests$tot)/5000) *5000)) +
       theme_bw() +
       theme(legend.title = element_blank(),
-            legend.position = "top") 
+            legend.position = "top",
+            axis.text.x = element_text(angle = 45, hjust = 1)) 
     p <- ggplotly(p) 
     p
 }
@@ -126,11 +134,14 @@ plot_cases <- function(dat , state = c("Maryland", "California"), cases = "Confi
     shapes_l <- 21:24
     shapes_plot <- shapes_l[1:length(unique(dat_f$state))]
     
+    dat_f <- dat_f %>% 
+      separate(date, sep = -5, into = c("y", "m_d"))
+    
     p <- dat_f %>% 
-      ggplot(aes(x = date, y = cases, fill = state, shape = state),color = "black") +
-      geom_line(show.legend = FALSE, size = 0.2) +
+      ggplot(aes(x = as.character(m_d), y = cases, fill = state, shape = state, group = state),color = "black") +
       geom_point(size = 2, stroke = 0.2) +
-      scale_x_date(guide = guide_axis(n.dodge = 2)) +
+      geom_line(show.legend = FALSE, size = 0.2) +
+      scale_x_discrete() +
       scale_shape_manual(values = shapes_plot) +
       scale_fill_manual(values = cbPalette) +
       scale_alpha(guide = 'none') +
@@ -140,13 +151,15 @@ plot_cases <- function(dat , state = c("Maryland", "California"), cases = "Confi
       theme_bw() +
       theme(legend.title = element_blank(),
             legend.position = "top",
-            strip.background = element_rect(fill="grey90"))
+            strip.background = element_rect(fill="grey90"),
+            axis.text.x = element_text(angle = 45, hjust = 1))
     
     p <- ggplotly(p) %>%
       layout(legend = list(
-        orientation = "h"
-      ))
-    p}
+        orientation = "h")
+      )
+    p
+    }
 }
 
 
