@@ -9,6 +9,7 @@ library(plotly)
 library(shiny)
 library(shinydashboard)
 library(dashboardthemes)
+library(shinycssloaders)
 library(shinythemes)
 library(shinyWidgets)
 library(tidyverse)
@@ -19,63 +20,71 @@ library(vroom)
 
 
 # Get data ------
-
-COVID <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-"
-
-dat <- map_dfr(list("Confirmed", "Deaths", "Recovered"), function(x){
-
-  url_dat <- paste(COVID, x, ".csv", sep ="")
-  dat <- vroom(file = url_dat) 
-  dat <- add_column(dat, condition = x, .before = 1)
-  
-  dat
-
-})
-
-# Clean data -----
-
-states <- c("Washington", "New York", "California", "Massachusetts", "Diamond Princess", 
-            "Grand Princess", "Georgia", "Colorado", "Florida", "New Jersey", 
-            "Oregon", "Texas", "Illinois", "Pennsylvania", "Iowa", "Maryland", 
-            "North Carolina", "South Carolina", "Tennessee", "Virginia", 
-            "Arizona", "Indiana", "Kentucky", "District of Columbia", "Nevada", 
-            "New Hampshire", "Minnesota", "Nebraska", "Ohio", "Rhode Island", 
-            "Wisconsin", "Connecticut", "Hawaii", "Oklahoma", "Utah")
-
-dat_US <-  dat %>% 
-    rename(state = `Province/State`, country = `Country/Region`) %>% 
-    filter(state %in% states ) %>% 
-    pivot_longer(6: ncol(dat), names_to = "date", values_to = "cases") %>% 
-    mutate(date  = lubridate::mdy(date))
+get_cases <- function(){
+  COVID <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-"
+  dat <- map_dfr(list("Confirmed", "Deaths", "Recovered"), function(x){
     
-dat_US[dat_US == 0] <- NA
+    url_dat <- paste(COVID, x, ".csv", sep ="")
+    dat <- vroom(file = url_dat)
+    dat <- add_column(dat, condition = x, .before = 1)
+    dat
+  })
+  
+  # Clean data -----
+  states <- c("Washington", "New York", "California", "Massachusetts", "Diamond Princess",
+              "Grand Princess", "Georgia", "Colorado", "Florida", "New Jersey",
+              "Oregon", "Texas", "Illinois", "Pennsylvania", "Iowa", "Maryland",
+              "North Carolina", "South Carolina", "Tennessee", "Virginia",
+              "Arizona", "Indiana", "Kentucky", "District of Columbia", "Nevada",
+              "New Hampshire", "Minnesota", "Nebraska", "Ohio", "Rhode Island",
+              "Wisconsin", "Connecticut", "Hawaii", "Oklahoma", "Utah")
+  
+  dat_US <-  dat %>%
+    rename(state = `Province/State`, country = `Country/Region`) %>%
+    filter(state %in% states ) %>%
+    pivot_longer(6: ncol(dat), names_to = "date", values_to = "cases") %>%
+    mutate(date  = lubridate::mdy(date))
+  
+  dat_US[dat_US == 0] <- NA
+  
+  dat_US <-   na.omit(dat_US)
+  
+  # tot by day in US
+  all_US <- dat_US %>%
+    group_by(condition, date) %>%
+    summarize(cases = sum(cases, na.rm = TRUE)) %>%
+    mutate(state = "US", country = "US", Lat = 37.0902, Long = 95.7129)
+  
+  all_US <- all_US[, names(dat_US)]
+  
+  dat_US <- bind_rows(dat_US, all_US)
+  
+  dat_US
+}
 
-dat_US <-   na.omit(dat_US) 
+get_tests <- function(){
+  # Get number of tests -----
+  cdc_page <- xml2::read_html("https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/testing-in-us.html")
+  tab_cdc <- cdc_page %>%
+    rvest::html_nodes("table") %>%
+    rvest::html_table() 
+  
+  tests <-  tab_cdc [[1]] %>% 
+    data.frame() %>% 
+    clean_names() %>% 
+    mutate(date_collected = lubridate::mdy(paste0(date_collected, "/2020"))) %>% 
+    pivot_longer(2:3, names_to = "lab_type", values_to = "n") %>% 
+    mutate(n = as.numeric(n)) %>% 
+    na.omit() 
+  tests
+}
 
-# tot by day in US
-all_US <- dat_US %>% 
-  group_by(condition, date) %>% 
-  summarize(cases = sum(cases, na.rm = TRUE)) %>% 
-  mutate(state = "US", country = "US", Lat = 37.0902, Long = 95.7129)
 
-all_US <- all_US[, names(dat_US)]
-
-dat_US <- bind_rows(dat_US, all_US)
+# dat_US <- get_cases()
+# 
+# tests <- get_tests()
 
 
-# Get number of tests -----
-cdc_page <- xml2::read_html("https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/testing-in-us.html")
-tab_cdc <- cdc_page %>%
-  rvest::html_nodes("table") %>%
-  rvest::html_table() 
-
-tests <-  tab_cdc [[1]] %>% 
-   data.frame() %>% 
-   clean_names() %>% 
-   mutate(date_collected = lubridate::mdy(paste0(date_collected, "/2020"))) %>% 
-   pivot_longer(2:3, names_to = "lab_type", values_to = "n") %>% 
-   mutate(n = as.numeric(n)) %>% 
-   na.omit() 
 
 # Plot tests -----
 
@@ -144,15 +153,14 @@ plot_cases <- function(dat = dat_US, state = c("Maryland", "California")){
 
 
 
+dat <- map_dfr(list("Confirmed", "Deaths", "Recovered"), function(x){
 
+  url_dat <- paste(COVID, x, ".csv", sep ="")
+  dat <- vroom(file = url_dat)
+  dat <- add_column(dat, condition = x, .before = 1)
 
+  dat
 
-
-
-
-
-
-
-
+})
 
 
