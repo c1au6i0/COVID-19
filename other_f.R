@@ -20,7 +20,14 @@ library(vroom)
 
 
 # Get data ------
+states <- c("Washington", "New York", "California", "Massachusetts", "Georgia", "Colorado", "Florida", "New Jersey",
+            "Oregon", "Texas", "Illinois", "Pennsylvania", "Iowa", "Maryland",
+            "North Carolina", "South Carolina", "Tennessee", "Virginia",
+            "Arizona", "Indiana", "Kentucky", "District of Columbia", "Nevada",
+            "New Hampshire", "Minnesota", "Nebraska", "Ohio", "Rhode Island",
+            "Wisconsin", "Connecticut", "Hawaii", "Oklahoma", "Utah")
 get_cases <- function(){
+  
   COVID <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-"
   dat <- map_dfr(list("Confirmed", "Deaths", "Recovered"), function(x){
     
@@ -80,12 +87,6 @@ get_tests <- function(){
 }
 
 
-# dat_US <- get_cases()
-# 
-# tests <- get_tests()
-
-
-
 # Plot tests -----
 
 plot_tested <- function(dat = tests) {
@@ -110,17 +111,14 @@ plot_tested <- function(dat = tests) {
     p
 }
 
-  
-
-
 # Plot infected-----
 
 cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 
 
-plot_cases <- function(dat = dat_US, state = c("Maryland", "California")){
+plot_cases <- function(dat , state = c("Maryland", "California")){
   # state <- sym(state)
-    dat_f <- dat_US %>%
+    dat_f <- dat %>%
       filter(state %in%  !!state) 
     
     # shapes of symbols
@@ -150,17 +148,5 @@ plot_cases <- function(dat = dat_US, state = c("Maryland", "California")){
       ))
     p
 }
-
-
-
-dat <- map_dfr(list("Confirmed", "Deaths", "Recovered"), function(x){
-
-  url_dat <- paste(COVID, x, ".csv", sep ="")
-  dat <- vroom(file = url_dat)
-  dat <- add_column(dat, condition = x, .before = 1)
-
-  dat
-
-})
 
 

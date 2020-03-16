@@ -50,11 +50,13 @@ ui <- dashboardPage(
 server <- function(input, output, session) {
   
   # # Get data -----
+  dat_US <- reactiveVal()
+  tests <- reactiveVal()
   withProgress(
     message = "retrieving the data...",
     {
-      dat_US <- get_cases()
-      tests <- get_tests()
+      dat_US(get_cases())
+      tests(get_tests())
   })
   
   
@@ -81,7 +83,7 @@ server <- function(input, output, session) {
     
     # render test plot -----
     output$tested <- renderPlotly({
-        p <- plot_tested()
+        p <- plot_tested(tests())
     })
     
     
@@ -93,7 +95,7 @@ server <- function(input, output, session) {
     # Render plot_ cases -----
     output$cases <- renderPlotly({
         
-        plot_cases(state = input$imp_state)
+        plot_cases(dat = dat_US(), state = input$imp_state)
       })
   
     
