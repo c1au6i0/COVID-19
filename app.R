@@ -41,7 +41,7 @@ ui <- dashboardPage(
           h4( "Data of Confirmed, Deaths and Recovered from", 
           a(href="https://github.com/CSSEGISandData/COVID-19", "JHU."),
           br(),
-          "Data of spectimen tested from",
+          "Data of specimens tested from",
           a(href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/testing-in-us.html", "CDC."),
           hr(style =  " margin-top: 1.1em; margin-bottom: 1.2em;")
           ),
