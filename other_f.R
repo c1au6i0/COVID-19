@@ -115,8 +115,12 @@ plot_tested <- function(dat = tests) {
             legend.position = "top",
             axis.text.x = element_text( hjust = 1)) 
     p <- ggplotly(p, tooltip = c("y", "x", "shape")) 
+    
+    p <- p %>%
+      config(p = ., displayModeBar =FALSE)
     p
 }
+
 
 
 
@@ -169,8 +173,9 @@ plot_cases <- function(dat){
       layout(
         legend = list(
         orientation = "h")
-      ) 
-      
+      ) %>% 
+      config(p = ., displayModeBar =FALSE)
+    
     p
     }
 }

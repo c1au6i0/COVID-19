@@ -28,7 +28,7 @@ ui <- dashboardPage(
             inputId = "imp_state",
             label = "Select one or more States (max 4):",
             choices = as.character(c("US", states)),
-            selected = c("Maryland", "Texas"),
+            selected = c("Maryland"),
             multiple = TRUE,
             options = list(maxItems = 4)),
           
