@@ -104,7 +104,8 @@ plot_tested <- function(dat = tests) {
     breaks <- unique(tests$m_d)[seq(1, n_date, ceiling(n_date/5))]
     
     p <- tests %>% 
-      ggplot(aes(x = m_d, y = tot, group = group), color = "black") +
+      rename(date = m_d) %>%
+      ggplot(aes(x = date, y = tot, group = group), color = "black") +
       geom_line(show.legend = FALSE, size = 0.2) +
       geom_point(size = 2, stroke = 0.2, fill = "#999999", shape = 21) +
       labs(x ="", y = "") +
@@ -157,7 +158,8 @@ plot_cases <- function(dat){
     
     p <- 
       dat_f %>% 
-      ggplot(aes(x = as.character(m_d), y = cases, fill = state, shape = state, group = state),color = "black") +
+      rename(date = m_d) %>% 
+      ggplot(aes(x = date, y = cases, fill = state, shape = state, group = state),color = "black") +
       geom_point(size = 2, stroke = 0.2) +
       geom_line(show.legend = FALSE, size = 0.2) +
       scale_shape_manual(values = shapes_plot) +

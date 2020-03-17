@@ -5,6 +5,6 @@ account: rden
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 1952882
-bundleId: 2890360
+bundleId: 2890452
 url: https://rden.shinyapps.io/covid-19/
-when: 1584454377.49539
+when: 1584456128.95284
