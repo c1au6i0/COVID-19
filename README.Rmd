@@ -13,4 +13,4 @@ Other dashboards (notably the [JHU](https://coronavirus.jhu.edu/map.html)), allo
 
 ### data
 
-**Data** of confirmed, deaths and recovered cases was obtained from [JHU repository](www.github.com/CSSEGISandData/COVID-19), whereas the data of specimens eested was scraped from the [CDC website](https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/testing-in-us.html).
+**Data** of confirmed, deaths and recovered cases was obtained from [JHU repository](www.github.com/CSSEGISandData/COVID-19), whereas the data of specimens tested was scraped from the [CDC website](https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/testing-in-us.html).

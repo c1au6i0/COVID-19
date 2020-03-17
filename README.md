@@ -17,5 +17,5 @@ in each U.S. state.
 
 **Data** of confirmed, deaths and recovered cases was obtained from [JHU
 repository](www.github.com/CSSEGISandData/COVID-19), whereas the data of
-specimens eested was scraped from the [CDC
+specimens tested was scraped from the [CDC
 website](https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/testing-in-us.html).
