@@ -114,7 +114,11 @@ plot_tested <- function(dat = tests) {
       theme(legend.title = element_blank(),
             legend.position = "top",
             axis.text.x = element_text( hjust = 1)) 
-    p <- ggplotly(p, tooltip = c("y", "x", "shape")) 
+    p <- ggplotly(p, tooltip = c("y", "x", "shape")) %>% 
+      layout(
+        xaxis = list(fixedrange = TRUE),
+        yaxis = list(fixedrange = TRUE)
+      )
     
     p <- p %>%
       config(p = ., displayModeBar =FALSE)
@@ -171,8 +175,13 @@ plot_cases <- function(dat){
     
     p <- ggplotly(p, tooltip = c("y", "x", "shape")) %>%
       layout(
-        legend = list(
-        orientation = "h")
+        legend = list(orientation = "h"),
+        xaxis = list(fixedrange = TRUE),
+        yaxis = list(fixedrange = TRUE),
+        xaxis2 = list(fixedrange = TRUE),
+        yaxis2 = list(fixedrange = TRUE),
+        xaxis3 = list(fixedrange = TRUE),
+        yaxis3 = list(fixedrange = TRUE)
       ) %>% 
       config(p = ., displayModeBar =FALSE)
     
