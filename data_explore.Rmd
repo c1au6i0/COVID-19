@@ -8,40 +8,9 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
 
 ```{r}
-library(DT)
-library(ggiraph)
-library(ggridges)
-library(rvest)
-library(htmlwidgets)
-library(janitor)
-library(leaflet)
-library(plotly)
-library(shiny)
-library(shinydashboard)
-library(dashboardthemes)
-library(shinycssloaders)
-library(shinythemes)
-library(shinyWidgets)
-library(tidyverse)
-library(scales)
-library(vroom)
-
-COVID <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-"
-
-dat <- map_dfr(list("Confirmed", "Deaths", "Recovered"), function(x){
-    
-    url_dat <- paste(COVID, x, ".csv", sep ="")
-    dat <- vroom(file = url_dat)
-    dat <- add_column(dat, condition = x, .before = 1)
-    dat
-})
+df <- data.frame() 
+ggplot(df) + geom_point() +
+  theme_void() +
+  annotate("text", x =1 , y =1, label = "No Case Reported")
   
-  # Clean data -----
-dat_US <-  dat %>%
-    rename(state = `Province/State`, country = `Country/Region`) 
-
-
-dat_US %>% 
-  filter(str_detect(state, "TX$"))
-
 ```

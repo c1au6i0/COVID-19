@@ -34,7 +34,7 @@ states <- c("Washington", "New York", "California", "Massachusetts", "Diamond Pr
             "Puerto Rico", "Virgin Islands, U.S.", "Guam")
 
 get_cases <- function(){
-
+  
   COVID <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-"
   dat <- map_dfr(list("Confirmed", "Deaths", "Recovered"), function(x){
     
@@ -89,41 +89,41 @@ get_tests <- function(){
 # Plot tests -----
 
 plot_tested <- function(dat = tests) {
-    tests <- dat %>% 
-      group_by(date_collected) %>% 
-      summarize(d_test = sum(n))
-    
-    tests[, "tot"] <- cumsum(tests$d_test)
-    
-    tests <- tests %>% 
-      separate(date_collected, sep = -5, into = c("y", "m_d")) %>% 
-      mutate(group = 1)
-     
-    n_date <- length(unique(tests$m_d))
-   
-    breaks <- unique(tests$m_d)[seq(1, n_date, ceiling(n_date/5))]
-    
-    p <- tests %>% 
-      rename(date = m_d) %>%
-      ggplot(aes(x = date, y = tot, group = group), color = "black") +
-      geom_line(show.legend = FALSE, size = 0.2) +
-      geom_point(size = 2, stroke = 0.2, fill = "#999999", shape = 21) +
-      labs(x ="", y = "") +
-      scale_x_discrete(breaks = breaks) +
-      scale_y_continuous(limits = c(0, ceiling(max(tests$tot)/5000) *5000)) +
-      theme_bw() +
-      theme(legend.title = element_blank(),
-            legend.position = "top",
-            axis.text.x = element_text( hjust = 1)) 
-    p <- ggplotly(p, tooltip = c("y", "x", "shape")) %>% 
-      layout(
-        xaxis = list(fixedrange = TRUE),
-        yaxis = list(fixedrange = TRUE)
-      )
-    
-    p <- p %>%
-      config(p = ., displayModeBar =FALSE)
-    p
+  tests <- dat %>% 
+    group_by(date_collected) %>% 
+    summarize(d_test = sum(n))
+  
+  tests[, "tot"] <- cumsum(tests$d_test)
+  
+  tests <- tests %>% 
+    separate(date_collected, sep = -5, into = c("y", "m_d")) %>% 
+    mutate(group = 1)
+  
+  n_date <- length(unique(tests$m_d))
+  
+  breaks <- unique(tests$m_d)[seq(1, n_date, ceiling(n_date/5))]
+  
+  p <- tests %>% 
+    rename(date = m_d) %>%
+    ggplot(aes(x = date, y = tot, group = group), color = "black") +
+    geom_line(show.legend = FALSE, size = 0.2) +
+    geom_point(size = 2, stroke = 0.2, fill = "#999999", shape = 21) +
+    labs(x ="", y = "") +
+    scale_x_discrete(breaks = breaks) +
+    scale_y_continuous(limits = c(0, ceiling(max(tests$tot)/5000) *5000)) +
+    theme_bw() +
+    theme(legend.title = element_blank(),
+          legend.position = "top",
+          axis.text.x = element_text( hjust = 1)) 
+  p <- ggplotly(p, tooltip = c("y", "x", "shape")) %>% 
+    layout(
+      xaxis = list(fixedrange = TRUE),
+      yaxis = list(fixedrange = TRUE)
+    )
+  
+  p <- p %>%
+    config(p = ., displayModeBar =FALSE)
+  p
 }
 
 
@@ -135,11 +135,8 @@ cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2",
 
 
 plot_cases <- function(dat){
-  # state <- sym(state)
-    # %>% 
-    #   filter(condition == !!cases)
-    
-    if(nrow(dat) != 0){
+
+  if(nrow(dat) > 0){
     # shapes of symbols
     shapes_l <- 21:24
     shapes_plot <- shapes_l[1:length(unique(dat$state))]
@@ -153,8 +150,6 @@ plot_cases <- function(dat){
     val <- unique(dat_f$m_d)
     
     breaks <- unique(dat_f$m_d)[seq(1, n_date, ceiling(n_date/5))]
-    
-    
     
     p <- 
       dat_f %>% 
@@ -186,9 +181,19 @@ plot_cases <- function(dat){
         yaxis3 = list(fixedrange = TRUE)
       ) %>% 
       config(p = ., displayModeBar =FALSE)
-    
-    p
-    }
+  }
+  
+  if(nrow(dat)== 0){
+    df <- data.frame()
+
+    p <- ggplot(df) + geom_point() +
+    theme_void() +
+    annotate("text", x =1 , y =1, label = "No Case Reported")
+
+    p <- ggplotly(p) %>%
+      config(displayModeBar =FALSE)
+  }
+  
+  p
+  
 }
-
-

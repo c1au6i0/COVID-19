@@ -132,7 +132,7 @@ server <- function(input, output, session) {
   output$body_UI <- renderUI ({
     n_cond <- length(unique(dat_f()$condition))
     
-    if(n_cond == 1) {
+    if(n_cond <= 1) {
       p <- plotlyOutput("cases", height = "400px")
     }
 
