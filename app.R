@@ -23,7 +23,7 @@ ui <- dashboardPage(
       ),
       fluidRow(
         box(
-          h2("Total Number of cases"),
+          h2("Total Number of COVID-19 Cases"),
           selectizeInput(
             inputId = "imp_state",
             label = "Select one or more States (max 4):",
@@ -37,7 +37,7 @@ ui <- dashboardPage(
         ),
         
         box(
-          h2("Total Number of Specimens Tested in U.S."),
+          h2("Total Number of Specimens Tested for COVID-19 in U.S."),
           h4( "Data of Confirmed, Deaths and Recovered from", 
           a(href="https://github.com/CSSEGISandData/COVID-19", "JHU."),
           br(),
