@@ -36,7 +36,7 @@ ui <- dashboardPage(
               inputId = "imp_state",
               label = "Select one or more States (max 4):",
               choices = as.character(c("US", states)),
-              selected = c("Maryland", "Alaska"),
+              selected = c("Maryland"),
               multiple = TRUE,
               options = list(maxItems = 4)
             ),
@@ -44,27 +44,38 @@ ui <- dashboardPage(
             tabPanel(id = "graph", title = "graph",
             uiOutput("body_UI")
             ),
-            tabPanel(id = "map", title = "map",
-                     pickerInput(
-                       inputId = "map", 
-                       label = NULL, 
-                       choices = c("Confirmed",
-                                   "Deaths", 
-                                   "Recovered"), 
-                       selected = "Confirmed",
-                       options = list(
-                         style = "btn-primary")
-                       
-                       ),
-                        
-                     conditionalPanel("!is.null(output.leaf)",
-                                   div( style = "display: inline-block;vertical-align: center; float: right",
-                                        textOutput("no_map"))
+            tabPanel(id = "map", 
+                     title = "map",
+          
+                     div(style = "display: inline-block; vertical-align: center; float:right",
+                           pickerInput(
+                             inputId = "map", 
+                             label = NULL, 
+                             choices = c("Confirmed",
+                                         "Deaths", 
+                                         "Recovered"), 
+                             selected = "Confirmed",
+                             options = list(
+                               style = "btn-primary"),
+                                width = "100%"
+                             
+                             )),
+                     div(style = "display: inline-block; vertical-align: center; float: left",
+                         h4("Select Variable:")
                      ),
-                     leafletOutput("leaf")
-
-              
-            )
+                              
+                     
+                     
+                     
+                     
+                           conditionalPanel("!is.null(output.leaf)",
+                                         div( style = "display: inline-block;vertical-align: center; float: right",
+                                              textOutput("no_map"))
+                           ),
+                           leafletOutput("leaf")
+      
+                    
+                  )
           )),
 
           box(
