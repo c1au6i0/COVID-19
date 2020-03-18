@@ -17,46 +17,69 @@ ui <- dashboardPage(
     shinyDashboardThemes(
       theme = "boe_website"
     ),
-    fluidRow(
-      box(
-        div(
-          style = "display: inline-block;vertical-align: center;",
-          textOutput("updated")
+        fluidRow(
+          box(
+            div(
+              style = "display: inline-block;vertical-align: center;",
+              textOutput("updated")
+            ),
+            div(
+              style = "display: inline-block; vertical-align: center; float:right",
+              materialSwitch("log_scale", "Y-axis in log2", value = FALSE)
+            )
+          )
         ),
-        div(
-          style = "display: inline-block; vertical-align: center; float:right",
-          materialSwitch("log_scale", "Y-axis in log2", value = FALSE)
-        )
-      )
-    ),
-    fluidRow(
-      box(
-        h2("Total Number of COVID-19 Cases"),
-        selectizeInput(
-          inputId = "imp_state",
-          label = "Select one or more States (max 4):",
-          choices = as.character(c("US", states)),
-          selected = c("Maryland"),
-          multiple = TRUE,
-          options = list(maxItems = 4)
-        ),
+        fluidRow(
+          box(
+            h2("Total Number of COVID-19 Cases"),
+            selectizeInput(
+              inputId = "imp_state",
+              label = "Select one or more States (max 4):",
+              choices = as.character(c("US", states)),
+              selected = c("Maryland", "Alaska"),
+              multiple = TRUE,
+              options = list(maxItems = 4)
+            ),
+          tabBox(width = "100%",
+            tabPanel(id = "graph", title = "graph",
+            uiOutput("body_UI")
+            ),
+            tabPanel(id = "map", title = "map",
+                     pickerInput(
+                       inputId = "map", 
+                       label = NULL, 
+                       choices = c("Confirmed",
+                                   "Deaths", 
+                                   "Recovered"), 
+                       selected = "Confirmed",
+                       options = list(
+                         style = "btn-primary")
+                       
+                       ),
+                        
+                     conditionalPanel("!is.null(output.leaf)",
+                                   div( style = "display: inline-block;vertical-align: center; float: right",
+                                        textOutput("no_map"))
+                     ),
+                     leafletOutput("leaf")
 
-        uiOutput("body_UI")
-      ),
+              
+            )
+          )),
 
-      box(
-        h2("Total Number of Specimens Tested for COVID-19 in U.S."),
-        h4(
-          "Data of Confirmed, Deaths and Recovered from",
-          a(href = "https://github.com/CSSEGISandData/COVID-19", "JHU."),
-          br(),
-          "Data of Specimens Tested from",
-          a(href = "https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/testing-in-us.html", "CDC."),
-          hr(style = " margin-top: 1.1em; margin-bottom: 1.2em;")
-        ),
+          box(
+            h2("Total Number of Specimens Tested for COVID-19 in U.S."),
+            h4(
+              "Data of Confirmed, Deaths and Recovered from",
+              a(href = "https://github.com/CSSEGISandData/COVID-19", "JHU."),
+              br(),
+              "Data of Specimens Tested from",
+              a(href = "https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/testing-in-us.html", "CDC."),
+              hr(style = " margin-top: 1.1em; margin-bottom: 1.2em;")
+            ),
 
 
-        plotlyOutput("tested", height = "400px")
+            plotlyOutput("tested", height = "400px")
       )
     )
   )
@@ -77,13 +100,20 @@ server <- function(input, output, session) {
 
 
   dat_f <- reactiveVal(NULL)
+  dat_m <- reactiveVal(NULL)
 
+  # filter data  ------------
   dat_f <- reactive({
     x <- input$imp_state
     dat_US %>%
       filter(state %in% x)
   })
 
+  dat_m <- reactive({
+    x <- input$map
+    dat_f() %>%
+      filter(condition ==  x)
+  })
 
   # license --------
   observeEvent(
@@ -146,6 +176,21 @@ server <- function(input, output, session) {
     }
     p
   })
+  
+  # Render Map -------
+  output$leaf <- renderLeaflet({
+    map_leaf(dat = dat_m())
+    })
+
+   # if no map -------
+
+  
+  output$no_map <- renderText({
+    if(nrow(dat_m()) == 0){
+      "No Cases Reported"
+    }
+  })
+
 }
 
 # Run the application

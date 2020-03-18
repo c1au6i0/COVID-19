@@ -2,6 +2,7 @@ library(DT)
 library(ggiraph)
 library(ggridges)
 library(rvest)
+library(htmltools)
 library(htmlwidgets)
 library(janitor)
 library(leaflet)
@@ -21,19 +22,9 @@ library(vroom)
 
 
 # Get data ------
-states <- c(
-  "Washington", "New York", "California", "Massachusetts", "Diamond Princess",
-  "Grand Princess", "Georgia", "Colorado", "Florida", "New Jersey",
-  "Oregon", "Texas", "Illinois", "Pennsylvania", "Iowa", "Maryland",
-  "North Carolina", "South Carolina", "Tennessee", "Virginia",
-  "Arizona", "Indiana", "Kentucky", "District of Columbia", "Nevada",
-  "New Hampshire", "Minnesota", "Nebraska", "Ohio", "Rhode Island",
-  "Wisconsin", "Connecticut", "Hawaii", "Oklahoma", "Utah", "Kansas",
-  "Louisiana", "Missouri", "Vermont", "Alaska", "Arkansas", "Delaware",
-  "Idaho", "Maine", "Michigan", "Mississippi", "Montana", "New Mexico",
-  "North Dakota", "South Dakota", "West Virginia", "Wyoming", "Alabama",
-  "Puerto Rico", "Virgin Islands, U.S.", "Guam"
-)
+
+states_abr <- vroom::vroom("other/states.csv")
+states <- states_abr$state
 
 get_cases <- function() {
   COVID <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-"
@@ -44,7 +35,7 @@ get_cases <- function() {
     dat
   })
 
-  # Clean data -----
+  # Clean data -
   dat_US <- dat %>%
     rename(state = `Province/State`, country = `Country/Region`) %>%
     filter(country %in% "US") %>%
@@ -59,7 +50,8 @@ get_cases <- function() {
   all_US <- dat_US %>%
     group_by(condition, date) %>%
     summarize(cases = sum(cases, na.rm = TRUE)) %>%
-    mutate(state = "US", country = "US", Lat = 37.0902, Long = 95.7129)
+    mutate(state = "US", country = "US", Lat = 38.9, Long = -77.00)
+  
 
   all_US <- all_US[, names(dat_US)]
 
@@ -208,5 +200,46 @@ plot_cases <- function(dat, log_scale = FALSE) {
   }
 
   p_plotly
+}
+
+
+# MAP ------
+
+# state_abb -----
+
+map_leaf <- function(dat, sel = NULL) {
+    if (nrow(dat) != 0) {
+        # THIS IS NOT NECESSARY YET but might when we get more info on the locations of cases
+        # # get the state abbreviation from the dataframe 
+        # st_abbr <- states_abr[states_abr$state == sel, "abbr"]
+        # 
+        # # subset dat based on the abbr. This is to avaoid to take twice the same data.
+        # # If there are not provinces than takes the name
+        # 
+        # # create pattern depending on the number of selection
+        # if (length(st_abbr) == 1) {
+        #   pattern <- paste0(st_abbr, "$")
+        # } else{
+        #   pattern <- paste0("(",
+        #          paste(sel, collapse = "|"), 
+        #          ")$", 
+        #          sep = "")
+        # }
+    
+    dat <- dat %>%
+      group_by(condition, state, country, Lat, Long) %>% 
+      summarise(max = max(cases))
+    
+    # Probably not the most elegant solution
+    dat <- dat[rep(seq_len(nrow(dat)), dat$max), ]
+    
+       p <-  dat %>% 
+          # filter(str_detect(state, pattern)) %>% 
+          leaflet() %>%
+          addTiles(options = providerTileOptions(maxZoom = 7)) %>%
+          addCircleMarkers(~Long, ~Lat, label = ~ htmlEscape(state), radius = 2, clusterOptions = "yes")
+
+  p
+    }
 }
 
