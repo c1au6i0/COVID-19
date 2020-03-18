@@ -155,19 +155,6 @@ server <- function(input, output, session) {
     p
   })
   
-  # Render Map -------
-  output$leaf <- renderLeaflet({
-    map_leaf(dat = dat_m())
-    })
-
-   # if no map -------
-
-  
-  output$no_map <- renderText({
-    if(nrow(dat_m()) == 0){
-      "No Cases Reported"
-    }
-  })
 
 }
 
