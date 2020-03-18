@@ -29,7 +29,7 @@ ui <- dashboardPage(
             )
           )
         ),
-        fluidRow(
+        fluidPage(
           box(
             h2("Total Number of COVID-19 Cases"),
             selectizeInput(
@@ -40,43 +40,10 @@ ui <- dashboardPage(
               multiple = TRUE,
               options = list(maxItems = 4)
             ),
-          tabBox(width = "100%",
-            tabPanel(id = "graph", title = "graph",
+            
             uiOutput("body_UI")
             ),
-            tabPanel(id = "map", 
-                     title = "map",
-               fluidRow(
-                     div(style = "display: inline-block; vertical-align: center; float:right",
-                           pickerInput(
-                             inputId = "map", 
-                             label = NULL, 
-                             choices = c("Confirmed",
-                                         "Deaths", 
-                                         "Recovered"), 
-                             selected = "Confirmed",
-                             options = list(
-                               style = "btn-primary"),
-                                width = "100%"
-                             
-                             )),
-                     div(style = "display: inline-block; vertical-align: center; float: left",
-                         h4("Select Variable:")
-                     )),
-                              
-                     fluidRow(
-                     
-                     
-                     
-                           conditionalPanel("!is.null(output.leaf)",
-                                        
-                                              textOutput("no_map")
-                           ),
-                           leafletOutput("leaf")
-      
-                    
-                  ))
-          )),
+
 
           box(
             h2("Total Number of Specimens Tested for COVID-19 in U.S."),

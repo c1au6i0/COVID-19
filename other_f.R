@@ -5,7 +5,7 @@ library(rvest)
 library(htmltools)
 library(htmlwidgets)
 library(janitor)
-library(leaflet)
+# library(leaflet)
 library(lemon)
 library(plotly)
 library(shiny)
@@ -206,40 +206,40 @@ plot_cases <- function(dat, log_scale = FALSE) {
 # MAP ------
 
 # state_abb -----
-
-map_leaf <- function(dat, sel = NULL) {
-    if (nrow(dat) != 0) {
-        # THIS IS NOT NECESSARY YET but might when we get more info on the locations of cases
-        # # get the state abbreviation from the dataframe 
-        # st_abbr <- states_abr[states_abr$state == sel, "abbr"]
-        # 
-        # # subset dat based on the abbr. This is to avaoid to take twice the same data.
-        # # If there are not provinces than takes the name
-        # 
-        # # create pattern depending on the number of selection
-        # if (length(st_abbr) == 1) {
-        #   pattern <- paste0(st_abbr, "$")
-        # } else{
-        #   pattern <- paste0("(",
-        #          paste(sel, collapse = "|"), 
-        #          ")$", 
-        #          sep = "")
-        # }
-    
-    dat <- dat %>%
-      group_by(condition, state, country, Lat, Long) %>% 
-      summarise(max = max(cases))
-    
-    # Probably not the most elegant solution
-    dat <- dat[rep(seq_len(nrow(dat)), dat$max), ]
-    
-       p <-  dat %>% 
-          # filter(str_detect(state, pattern)) %>% 
-          leaflet() %>%
-          addTiles(options = providerTileOptions(maxZoom = 7, zoomControl = FALSE)) %>%
-          addCircleMarkers(~Long, ~Lat, label = ~ htmlEscape(state), radius = 2, clusterOptions = "yes")
-
-  p
-    }
-}
-
+# 
+# map_leaf <- function(dat, sel = NULL) {
+#     if (nrow(dat) != 0) {
+#         # THIS IS NOT NECESSARY YET but might when we get more info on the locations of cases
+#         # # get the state abbreviation from the dataframe 
+#         # st_abbr <- states_abr[states_abr$state == sel, "abbr"]
+#         # 
+#         # # subset dat based on the abbr. This is to avaoid to take twice the same data.
+#         # # If there are not provinces than takes the name
+#         # 
+#         # # create pattern depending on the number of selection
+#         # if (length(st_abbr) == 1) {
+#         #   pattern <- paste0(st_abbr, "$")
+#         # } else{
+#         #   pattern <- paste0("(",
+#         #          paste(sel, collapse = "|"), 
+#         #          ")$", 
+#         #          sep = "")
+#         # }
+#     
+#     dat <- dat %>%
+#       group_by(condition, state, country, Lat, Long) %>% 
+#       summarise(max = max(cases))
+#     
+#     # Probably not the most elegant solution
+#     dat <- dat[rep(seq_len(nrow(dat)), dat$max), ]
+#     
+#        p <-  dat %>% 
+#           # filter(str_detect(state, pattern)) %>% 
+#           leaflet() %>%
+#           addTiles(options = providerTileOptions(maxZoom = 7, zoomControl = FALSE)) %>%
+#           addCircleMarkers(~Long, ~Lat, label = ~ htmlEscape(state), radius = 2, clusterOptions = "yes")
+# 
+#   p
+#     }
+# }
+# 
