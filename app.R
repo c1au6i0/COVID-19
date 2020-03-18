@@ -46,7 +46,7 @@ ui <- dashboardPage(
             ),
             tabPanel(id = "map", 
                      title = "map",
-          
+               fluidRow(
                      div(style = "display: inline-block; vertical-align: center; float:right",
                            pickerInput(
                              inputId = "map", 
@@ -62,20 +62,20 @@ ui <- dashboardPage(
                              )),
                      div(style = "display: inline-block; vertical-align: center; float: left",
                          h4("Select Variable:")
-                     ),
+                     )),
                               
-                     
+                     fluidRow(
                      
                      
                      
                            conditionalPanel("!is.null(output.leaf)",
-                                         div( style = "display: inline-block;vertical-align: center; float: right",
-                                              textOutput("no_map"))
+                                        
+                                              textOutput("no_map")
                            ),
                            leafletOutput("leaf")
       
                     
-                  )
+                  ))
           )),
 
           box(
