@@ -1,0 +1,10 @@
+name: covmap
+title:
+username:
+account: rden
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1962853
+bundleId: 2896128
+url: https://rden.shinyapps.io/covmap/
+when: 1584576530.87138

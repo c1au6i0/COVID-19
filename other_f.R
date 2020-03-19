@@ -233,13 +233,14 @@ map_leaf <- function(dat, sel = NULL) {
     # Probably not the most elegant solution
     dat <- dat[rep(seq_len(nrow(dat)), dat$max), ]
     
-       p <-  dat %>% 
+    
+    p <-  dat %>% 
           # filter(str_detect(state, pattern)) %>% 
           leaflet() %>%
-          addTiles(options = providerTileOptions(maxZoom = 7, zoomControl = FALSE)) %>%
+          addTiles(options = providerTileOptions(maxZoom = 5, zoomControl = FALSE)) %>%
           addCircleMarkers(~Long, ~Lat, label = ~ htmlEscape(state), radius = 2, clusterOptions = "yes")
 
   p
     }
 }
-
+# https://stackoverflow.com/questions/42276220/clear-leaflet-markers-in-shiny-app-with-slider-barhttps://stackoverflow.com/questions/42276220/clear-leaflet-markers-in-shiny-app-with-slider-bar
