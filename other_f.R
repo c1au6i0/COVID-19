@@ -238,7 +238,8 @@ map_leaf <- function(dat, sel = NULL) {
           # filter(str_detect(state, pattern)) %>% 
           leaflet() %>%
           addTiles(options = providerTileOptions(maxZoom = 5, zoomControl = FALSE)) %>%
-          addCircleMarkers(~Long, ~Lat, label = ~ htmlEscape(state), radius = 2, clusterOptions = "yes")
+          addCircleMarkers(~Long, ~Lat, label = ~ htmlEscape(state), radius = 2, clusterOptions = markerClusterOptions(spiderfyOnMaxZoom = FALSE)) 
+          
 
   p
     }
