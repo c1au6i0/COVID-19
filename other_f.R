@@ -71,6 +71,7 @@ get_tests <- function() {
     data.frame() %>%
     clean_names() %>%
     mutate(date_collected = lubridate::mdy(paste0(date_collected, "/2020"))) %>%
+    mutate(cdc_labs = as.numeric(str_extract(cdc_labs, "[1-9]"))) %>% 
     pivot_longer(2:3, names_to = "lab_type", values_to = "n") %>%
     mutate(n = as.numeric(n)) %>%
     na.omit()
