@@ -22,7 +22,6 @@ library(vroom)
 
 
 
-
 # Get data ------
 
 # states abbreviations are not used at this time
@@ -31,8 +30,11 @@ states_abr <- vroom::vroom("other/states.csv")
 states <- states_abr$state
 states_geoloc <- vroom::vroom("other/geoloc.csv")
 
-old_series <- vroom::vroom("other/us_series.csv")
+old_series <- vroom::vroom("other/us_series.csv") %>% 
+                select(date:cases)
 
+
+new_cases <- get_daily_cases()
 dat_US <- rbind(old_series, new_cases) %>% 
   filter(state %in% states) # in the U.S territories they include Amercan Samoa, "Northern Mariana Islands", "Virgin Islands" ,"Wuhan Evacuee", "Recovered"  
 
@@ -78,7 +80,7 @@ get_daily_cases <- function(){
     rename(date = last_update, state = province_state) %>% 
     pivot_longer(3:4, "condition", values_to = "cases") %>% 
     ungroup(date) %>% 
-    mutate(date = strftime(date, "%Y-%m-%d"))
+    mutate(date = strftime(date, "%m-%d-%Y"))
 }
 
 
@@ -163,7 +165,8 @@ plot_cases <- function(dat, log_scale = FALSE) {
     shapes_plot <- shapes_l[1:length(unique(dat$state))]
 
     dat_f <- dat %>%
-      arrange(date) %>%
+      mutate(date = mdy(date)) %>%
+      arrange(date) %>% 
       separate(date, sep = -5, into = c("y", "m_d"))
 
     n_date <- length(unique(dat_f$m_d))
@@ -266,6 +269,13 @@ map_leaf <- function(dat, sel = NULL) {
     }
 }
 # https://stackoverflow.com/questions/42276220/clear-leaflet-markers-in-shiny-app-with-slider-barhttps://stackoverflow.com/questions/42276220/clear-leaflet-markers-in-shiny-app-with-slider-bar
+
+
+dat_US %>% 
+  filter(state == "Maryland") %>% 
+  plot_cases()
+
+
 
 
 # TIME SERIES before change in data structure ----------------------------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
