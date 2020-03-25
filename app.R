@@ -89,7 +89,7 @@ ui <- dashboardPage(
       box(width = 12,
         h2("Total Number of Specimens Tested for COVID-19 in U.S."),
         h4(
-          "Data of Confirmed, Deaths and Recovered from",
+          "Data of Confirmed and Deaths from",
           a(href = "https://github.com/CSSEGISandData/COVID-19", "JHU."),
           br(),
           "Data of Specimens Tested from",
