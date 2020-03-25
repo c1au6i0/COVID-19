@@ -1,0 +1,1782 @@
+date,state,condition,cases
+2020-03-10,Washington,confirmed,267
+2020-03-11,Washington,confirmed,366
+2020-03-12,Washington,confirmed,442
+2020-03-13,Washington,confirmed,568
+2020-03-14,Washington,confirmed,572
+2020-03-15,Washington,confirmed,643
+2020-03-16,Washington,confirmed,904
+2020-03-17,Washington,confirmed,1076
+2020-03-18,Washington,confirmed,1014
+2020-03-19,Washington,confirmed,1376
+2020-03-20,Washington,confirmed,1524
+2020-03-21,Washington,confirmed,1793
+2020-03-22,Washington,confirmed,1996
+2020-03-10,New York,confirmed,173
+2020-03-11,New York,confirmed,220
+2020-03-12,New York,confirmed,328
+2020-03-13,New York,confirmed,421
+2020-03-14,New York,confirmed,525
+2020-03-15,New York,confirmed,732
+2020-03-16,New York,confirmed,967
+2020-03-17,New York,confirmed,1706
+2020-03-18,New York,confirmed,2495
+2020-03-19,New York,confirmed,5365
+2020-03-20,New York,confirmed,8310
+2020-03-21,New York,confirmed,11710
+2020-03-22,New York,confirmed,15793
+2020-03-10,California,confirmed,144
+2020-03-11,California,confirmed,177
+2020-03-12,California,confirmed,221
+2020-03-13,California,confirmed,282
+2020-03-14,California,confirmed,340
+2020-03-15,California,confirmed,426
+2020-03-16,California,confirmed,557
+2020-03-17,California,confirmed,698
+2020-03-18,California,confirmed,751
+2020-03-19,California,confirmed,952
+2020-03-20,California,confirmed,1177
+2020-03-21,California,confirmed,1364
+2020-03-22,California,confirmed,1642
+2020-03-10,Massachusetts,confirmed,92
+2020-03-11,Massachusetts,confirmed,95
+2020-03-12,Massachusetts,confirmed,108
+2020-03-13,Massachusetts,confirmed,123
+2020-03-14,Massachusetts,confirmed,138
+2020-03-15,Massachusetts,confirmed,164
+2020-03-16,Massachusetts,confirmed,197
+2020-03-17,Massachusetts,confirmed,218
+2020-03-18,Massachusetts,confirmed,218
+2020-03-19,Massachusetts,confirmed,328
+2020-03-20,Massachusetts,confirmed,413
+2020-03-21,Massachusetts,confirmed,525
+2020-03-22,Massachusetts,confirmed,646
+2020-02-24,Diamond Princess,confirmed,36
+2020-02-25,Diamond Princess,confirmed,36
+2020-02-26,Diamond Princess,confirmed,42
+2020-02-27,Diamond Princess,confirmed,42
+2020-02-28,Diamond Princess,confirmed,44
+2020-02-29,Diamond Princess,confirmed,44
+2020-03-01,Diamond Princess,confirmed,44
+2020-03-02,Diamond Princess,confirmed,45
+2020-03-03,Diamond Princess,confirmed,45
+2020-03-04,Diamond Princess,confirmed,45
+2020-03-05,Diamond Princess,confirmed,45
+2020-03-06,Diamond Princess,confirmed,45
+2020-03-07,Diamond Princess,confirmed,45
+2020-03-08,Diamond Princess,confirmed,45
+2020-03-09,Diamond Princess,confirmed,45
+2020-03-10,Diamond Princess,confirmed,46
+2020-03-11,Diamond Princess,confirmed,46
+2020-03-12,Diamond Princess,confirmed,46
+2020-03-13,Diamond Princess,confirmed,46
+2020-03-14,Diamond Princess,confirmed,46
+2020-03-15,Diamond Princess,confirmed,46
+2020-03-16,Diamond Princess,confirmed,47
+2020-03-17,Diamond Princess,confirmed,47
+2020-03-18,Diamond Princess,confirmed,47
+2020-03-19,Diamond Princess,confirmed,47
+2020-03-20,Diamond Princess,confirmed,49
+2020-03-21,Diamond Princess,confirmed,49
+2020-03-22,Diamond Princess,confirmed,49
+2020-03-07,Grand Princess,confirmed,21
+2020-03-08,Grand Princess,confirmed,21
+2020-03-09,Grand Princess,confirmed,21
+2020-03-10,Grand Princess,confirmed,21
+2020-03-11,Grand Princess,confirmed,21
+2020-03-12,Grand Princess,confirmed,21
+2020-03-13,Grand Princess,confirmed,21
+2020-03-14,Grand Princess,confirmed,21
+2020-03-15,Grand Princess,confirmed,21
+2020-03-16,Grand Princess,confirmed,20
+2020-03-17,Grand Princess,confirmed,21
+2020-03-18,Grand Princess,confirmed,21
+2020-03-19,Grand Princess,confirmed,22
+2020-03-20,Grand Princess,confirmed,23
+2020-03-21,Grand Princess,confirmed,23
+2020-03-22,Grand Princess,confirmed,30
+2020-03-10,Georgia,confirmed,17
+2020-03-11,Georgia,confirmed,23
+2020-03-12,Georgia,confirmed,31
+2020-03-13,Georgia,confirmed,42
+2020-03-14,Georgia,confirmed,66
+2020-03-15,Georgia,confirmed,99
+2020-03-16,Georgia,confirmed,121
+2020-03-17,Georgia,confirmed,146
+2020-03-18,Georgia,confirmed,199
+2020-03-19,Georgia,confirmed,287
+2020-03-20,Georgia,confirmed,420
+2020-03-21,Georgia,confirmed,507
+2020-03-22,Georgia,confirmed,600
+2020-03-10,Colorado,confirmed,15
+2020-03-11,Colorado,confirmed,34
+2020-03-12,Colorado,confirmed,45
+2020-03-13,Colorado,confirmed,49
+2020-03-14,Colorado,confirmed,101
+2020-03-15,Colorado,confirmed,131
+2020-03-16,Colorado,confirmed,160
+2020-03-17,Colorado,confirmed,160
+2020-03-18,Colorado,confirmed,184
+2020-03-19,Colorado,confirmed,277
+2020-03-20,Colorado,confirmed,363
+2020-03-21,Colorado,confirmed,390
+2020-03-22,Colorado,confirmed,476
+2020-03-10,Florida,confirmed,15
+2020-03-11,Florida,confirmed,28
+2020-03-12,Florida,confirmed,35
+2020-03-13,Florida,confirmed,50
+2020-03-14,Florida,confirmed,76
+2020-03-15,Florida,confirmed,115
+2020-03-16,Florida,confirmed,155
+2020-03-17,Florida,confirmed,216
+2020-03-18,Florida,confirmed,314
+2020-03-19,Florida,confirmed,417
+2020-03-20,Florida,confirmed,563
+2020-03-21,Florida,confirmed,659
+2020-03-22,Florida,confirmed,830
+2020-03-10,New Jersey,confirmed,15
+2020-03-11,New Jersey,confirmed,23
+2020-03-12,New Jersey,confirmed,29
+2020-03-13,New Jersey,confirmed,29
+2020-03-14,New Jersey,confirmed,69
+2020-03-15,New Jersey,confirmed,98
+2020-03-16,New Jersey,confirmed,178
+2020-03-17,New Jersey,confirmed,267
+2020-03-18,New Jersey,confirmed,267
+2020-03-19,New Jersey,confirmed,742
+2020-03-20,New Jersey,confirmed,890
+2020-03-21,New Jersey,confirmed,1327
+2020-03-22,New Jersey,confirmed,1914
+2020-03-10,Oregon,confirmed,15
+2020-03-11,Oregon,confirmed,19
+2020-03-12,Oregon,confirmed,24
+2020-03-13,Oregon,confirmed,30
+2020-03-14,Oregon,confirmed,32
+2020-03-15,Oregon,confirmed,36
+2020-03-16,Oregon,confirmed,39
+2020-03-17,Oregon,confirmed,66
+2020-03-18,Oregon,confirmed,68
+2020-03-19,Oregon,confirmed,88
+2020-03-20,Oregon,confirmed,114
+2020-03-21,Oregon,confirmed,114
+2020-03-22,Oregon,confirmed,161
+2020-03-10,Texas,confirmed,13
+2020-03-11,Texas,confirmed,21
+2020-03-12,Texas,confirmed,27
+2020-03-13,Texas,confirmed,43
+2020-03-14,Texas,confirmed,57
+2020-03-15,Texas,confirmed,72
+2020-03-16,Texas,confirmed,85
+2020-03-17,Texas,confirmed,110
+2020-03-18,Texas,confirmed,173
+2020-03-19,Texas,confirmed,260
+2020-03-20,Texas,confirmed,394
+2020-03-21,Texas,confirmed,581
+2020-03-22,Texas,confirmed,627
+2020-03-10,Illinois,confirmed,12
+2020-03-11,Illinois,confirmed,25
+2020-03-12,Illinois,confirmed,32
+2020-03-13,Illinois,confirmed,46
+2020-03-14,Illinois,confirmed,64
+2020-03-15,Illinois,confirmed,93
+2020-03-16,Illinois,confirmed,105
+2020-03-17,Illinois,confirmed,161
+2020-03-18,Illinois,confirmed,162
+2020-03-19,Illinois,confirmed,422
+2020-03-20,Illinois,confirmed,585
+2020-03-21,Illinois,confirmed,753
+2020-03-22,Illinois,confirmed,1049
+2020-03-10,Pennsylvania,confirmed,12
+2020-03-11,Pennsylvania,confirmed,16
+2020-03-12,Pennsylvania,confirmed,22
+2020-03-13,Pennsylvania,confirmed,41
+2020-03-14,Pennsylvania,confirmed,47
+2020-03-15,Pennsylvania,confirmed,66
+2020-03-16,Pennsylvania,confirmed,77
+2020-03-17,Pennsylvania,confirmed,112
+2020-03-18,Pennsylvania,confirmed,152
+2020-03-19,Pennsylvania,confirmed,206
+2020-03-20,Pennsylvania,confirmed,303
+2020-03-21,Pennsylvania,confirmed,396
+2020-03-22,Pennsylvania,confirmed,509
+2020-03-10,Iowa,confirmed,8
+2020-03-11,Iowa,confirmed,13
+2020-03-12,Iowa,confirmed,16
+2020-03-13,Iowa,confirmed,17
+2020-03-14,Iowa,confirmed,17
+2020-03-15,Iowa,confirmed,18
+2020-03-16,Iowa,confirmed,23
+2020-03-17,Iowa,confirmed,23
+2020-03-18,Iowa,confirmed,29
+2020-03-19,Iowa,confirmed,44
+2020-03-20,Iowa,confirmed,45
+2020-03-21,Iowa,confirmed,68
+2020-03-22,Iowa,confirmed,90
+2020-03-10,Maryland,confirmed,8
+2020-03-11,Maryland,confirmed,9
+2020-03-12,Maryland,confirmed,12
+2020-03-13,Maryland,confirmed,18
+2020-03-14,Maryland,confirmed,26
+2020-03-15,Maryland,confirmed,32
+2020-03-16,Maryland,confirmed,41
+2020-03-17,Maryland,confirmed,60
+2020-03-18,Maryland,confirmed,85
+2020-03-19,Maryland,confirmed,107
+2020-03-20,Maryland,confirmed,149
+2020-03-21,Maryland,confirmed,193
+2020-03-22,Maryland,confirmed,244
+2020-03-10,North Carolina,confirmed,7
+2020-03-11,North Carolina,confirmed,7
+2020-03-12,North Carolina,confirmed,15
+2020-03-13,North Carolina,confirmed,17
+2020-03-14,North Carolina,confirmed,24
+2020-03-15,North Carolina,confirmed,33
+2020-03-16,North Carolina,confirmed,38
+2020-03-17,North Carolina,confirmed,64
+2020-03-18,North Carolina,confirmed,70
+2020-03-19,North Carolina,confirmed,123
+2020-03-20,North Carolina,confirmed,172
+2020-03-21,North Carolina,confirmed,253
+2020-03-22,North Carolina,confirmed,302
+2020-03-10,South Carolina,confirmed,7
+2020-03-11,South Carolina,confirmed,10
+2020-03-12,South Carolina,confirmed,12
+2020-03-13,South Carolina,confirmed,13
+2020-03-14,South Carolina,confirmed,19
+2020-03-15,South Carolina,confirmed,28
+2020-03-16,South Carolina,confirmed,33
+2020-03-17,South Carolina,confirmed,47
+2020-03-18,South Carolina,confirmed,47
+2020-03-19,South Carolina,confirmed,81
+2020-03-20,South Carolina,confirmed,126
+2020-03-21,South Carolina,confirmed,171
+2020-03-22,South Carolina,confirmed,196
+2020-03-10,Tennessee,confirmed,7
+2020-03-11,Tennessee,confirmed,9
+2020-03-12,Tennessee,confirmed,18
+2020-03-13,Tennessee,confirmed,26
+2020-03-14,Tennessee,confirmed,32
+2020-03-15,Tennessee,confirmed,39
+2020-03-16,Tennessee,confirmed,52
+2020-03-17,Tennessee,confirmed,74
+2020-03-18,Tennessee,confirmed,79
+2020-03-19,Tennessee,confirmed,154
+2020-03-20,Tennessee,confirmed,233
+2020-03-21,Tennessee,confirmed,371
+2020-03-22,Tennessee,confirmed,505
+2020-03-10,Virginia,confirmed,7
+2020-03-11,Virginia,confirmed,9
+2020-03-12,Virginia,confirmed,17
+2020-03-13,Virginia,confirmed,30
+2020-03-14,Virginia,confirmed,41
+2020-03-15,Virginia,confirmed,45
+2020-03-16,Virginia,confirmed,49
+2020-03-17,Virginia,confirmed,67
+2020-03-18,Virginia,confirmed,77
+2020-03-19,Virginia,confirmed,99
+2020-03-20,Virginia,confirmed,122
+2020-03-21,Virginia,confirmed,156
+2020-03-22,Virginia,confirmed,221
+2020-03-10,Arizona,confirmed,6
+2020-03-11,Arizona,confirmed,9
+2020-03-12,Arizona,confirmed,9
+2020-03-13,Arizona,confirmed,9
+2020-03-14,Arizona,confirmed,12
+2020-03-15,Arizona,confirmed,13
+2020-03-16,Arizona,confirmed,18
+2020-03-17,Arizona,confirmed,20
+2020-03-18,Arizona,confirmed,27
+2020-03-19,Arizona,confirmed,45
+2020-03-20,Arizona,confirmed,78
+2020-03-21,Arizona,confirmed,118
+2020-03-22,Arizona,confirmed,152
+2020-03-10,Indiana,confirmed,6
+2020-03-11,Indiana,confirmed,11
+2020-03-12,Indiana,confirmed,13
+2020-03-13,Indiana,confirmed,13
+2020-03-14,Indiana,confirmed,16
+2020-03-15,Indiana,confirmed,20
+2020-03-16,Indiana,confirmed,25
+2020-03-17,Indiana,confirmed,30
+2020-03-18,Indiana,confirmed,39
+2020-03-19,Indiana,confirmed,60
+2020-03-20,Indiana,confirmed,86
+2020-03-21,Indiana,confirmed,128
+2020-03-22,Indiana,confirmed,201
+2020-03-10,Kentucky,confirmed,6
+2020-03-11,Kentucky,confirmed,8
+2020-03-12,Kentucky,confirmed,10
+2020-03-13,Kentucky,confirmed,14
+2020-03-14,Kentucky,confirmed,14
+2020-03-15,Kentucky,confirmed,20
+2020-03-16,Kentucky,confirmed,21
+2020-03-17,Kentucky,confirmed,26
+2020-03-18,Kentucky,confirmed,27
+2020-03-19,Kentucky,confirmed,37
+2020-03-20,Kentucky,confirmed,47
+2020-03-21,Kentucky,confirmed,87
+2020-03-22,Kentucky,confirmed,99
+2020-03-10,District of Columbia,confirmed,5
+2020-03-11,District of Columbia,confirmed,10
+2020-03-12,District of Columbia,confirmed,10
+2020-03-13,District of Columbia,confirmed,10
+2020-03-14,District of Columbia,confirmed,10
+2020-03-15,District of Columbia,confirmed,16
+2020-03-16,District of Columbia,confirmed,22
+2020-03-17,District of Columbia,confirmed,22
+2020-03-18,District of Columbia,confirmed,31
+2020-03-19,District of Columbia,confirmed,40
+2020-03-20,District of Columbia,confirmed,71
+2020-03-21,District of Columbia,confirmed,77
+2020-03-22,District of Columbia,confirmed,102
+2020-03-10,Nevada,confirmed,4
+2020-03-11,Nevada,confirmed,7
+2020-03-12,Nevada,confirmed,14
+2020-03-13,Nevada,confirmed,17
+2020-03-14,Nevada,confirmed,21
+2020-03-15,Nevada,confirmed,24
+2020-03-16,Nevada,confirmed,45
+2020-03-17,Nevada,confirmed,56
+2020-03-18,Nevada,confirmed,55
+2020-03-19,Nevada,confirmed,95
+2020-03-20,Nevada,confirmed,114
+2020-03-21,Nevada,confirmed,161
+2020-03-22,Nevada,confirmed,190
+2020-03-10,New Hampshire,confirmed,4
+2020-03-11,New Hampshire,confirmed,5
+2020-03-12,New Hampshire,confirmed,6
+2020-03-13,New Hampshire,confirmed,6
+2020-03-14,New Hampshire,confirmed,7
+2020-03-15,New Hampshire,confirmed,13
+2020-03-16,New Hampshire,confirmed,17
+2020-03-17,New Hampshire,confirmed,26
+2020-03-18,New Hampshire,confirmed,26
+2020-03-19,New Hampshire,confirmed,44
+2020-03-20,New Hampshire,confirmed,44
+2020-03-21,New Hampshire,confirmed,55
+2020-03-22,New Hampshire,confirmed,65
+2020-03-10,Minnesota,confirmed,3
+2020-03-11,Minnesota,confirmed,5
+2020-03-12,Minnesota,confirmed,9
+2020-03-13,Minnesota,confirmed,14
+2020-03-14,Minnesota,confirmed,21
+2020-03-15,Minnesota,confirmed,35
+2020-03-16,Minnesota,confirmed,54
+2020-03-17,Minnesota,confirmed,60
+2020-03-18,Minnesota,confirmed,77
+2020-03-19,Minnesota,confirmed,89
+2020-03-20,Minnesota,confirmed,115
+2020-03-21,Minnesota,confirmed,138
+2020-03-22,Minnesota,confirmed,169
+2020-03-10,Nebraska,confirmed,3
+2020-03-11,Nebraska,confirmed,5
+2020-03-12,Nebraska,confirmed,10
+2020-03-13,Nebraska,confirmed,13
+2020-03-14,Nebraska,confirmed,14
+2020-03-15,Nebraska,confirmed,17
+2020-03-16,Nebraska,confirmed,18
+2020-03-17,Nebraska,confirmed,21
+2020-03-18,Nebraska,confirmed,24
+2020-03-19,Nebraska,confirmed,29
+2020-03-20,Nebraska,confirmed,37
+2020-03-21,Nebraska,confirmed,38
+2020-03-22,Nebraska,confirmed,51
+2020-03-10,Ohio,confirmed,3
+2020-03-11,Ohio,confirmed,4
+2020-03-12,Ohio,confirmed,5
+2020-03-13,Ohio,confirmed,13
+2020-03-14,Ohio,confirmed,26
+2020-03-15,Ohio,confirmed,37
+2020-03-16,Ohio,confirmed,50
+2020-03-17,Ohio,confirmed,67
+2020-03-18,Ohio,confirmed,86
+2020-03-19,Ohio,confirmed,119
+2020-03-20,Ohio,confirmed,173
+2020-03-21,Ohio,confirmed,248
+2020-03-22,Ohio,confirmed,355
+2020-03-10,Rhode Island,confirmed,3
+2020-03-11,Rhode Island,confirmed,5
+2020-03-12,Rhode Island,confirmed,5
+2020-03-13,Rhode Island,confirmed,14
+2020-03-14,Rhode Island,confirmed,20
+2020-03-15,Rhode Island,confirmed,20
+2020-03-16,Rhode Island,confirmed,21
+2020-03-17,Rhode Island,confirmed,23
+2020-03-18,Rhode Island,confirmed,33
+2020-03-19,Rhode Island,confirmed,44
+2020-03-20,Rhode Island,confirmed,54
+2020-03-21,Rhode Island,confirmed,66
+2020-03-22,Rhode Island,confirmed,83
+2020-03-10,Wisconsin,confirmed,3
+2020-03-11,Wisconsin,confirmed,6
+2020-03-12,Wisconsin,confirmed,8
+2020-03-13,Wisconsin,confirmed,19
+2020-03-14,Wisconsin,confirmed,27
+2020-03-15,Wisconsin,confirmed,32
+2020-03-16,Wisconsin,confirmed,47
+2020-03-17,Wisconsin,confirmed,72
+2020-03-18,Wisconsin,confirmed,92
+2020-03-19,Wisconsin,confirmed,159
+2020-03-20,Wisconsin,confirmed,207
+2020-03-21,Wisconsin,confirmed,282
+2020-03-22,Wisconsin,confirmed,381
+2020-03-10,Connecticut,confirmed,2
+2020-03-11,Connecticut,confirmed,3
+2020-03-12,Connecticut,confirmed,5
+2020-03-13,Connecticut,confirmed,11
+2020-03-14,Connecticut,confirmed,22
+2020-03-15,Connecticut,confirmed,24
+2020-03-16,Connecticut,confirmed,30
+2020-03-17,Connecticut,confirmed,68
+2020-03-18,Connecticut,confirmed,68
+2020-03-19,Connecticut,confirmed,159
+2020-03-20,Connecticut,confirmed,194
+2020-03-21,Connecticut,confirmed,194
+2020-03-22,Connecticut,confirmed,223
+2020-03-10,Hawaii,confirmed,2
+2020-03-11,Hawaii,confirmed,2
+2020-03-12,Hawaii,confirmed,2
+2020-03-13,Hawaii,confirmed,2
+2020-03-14,Hawaii,confirmed,4
+2020-03-15,Hawaii,confirmed,6
+2020-03-16,Hawaii,confirmed,7
+2020-03-17,Hawaii,confirmed,10
+2020-03-18,Hawaii,confirmed,14
+2020-03-19,Hawaii,confirmed,16
+2020-03-20,Hawaii,confirmed,26
+2020-03-21,Hawaii,confirmed,37
+2020-03-22,Hawaii,confirmed,48
+2020-03-10,Oklahoma,confirmed,2
+2020-03-11,Oklahoma,confirmed,2
+2020-03-12,Oklahoma,confirmed,2
+2020-03-13,Oklahoma,confirmed,2
+2020-03-14,Oklahoma,confirmed,4
+2020-03-15,Oklahoma,confirmed,7
+2020-03-16,Oklahoma,confirmed,10
+2020-03-17,Oklahoma,confirmed,19
+2020-03-18,Oklahoma,confirmed,19
+2020-03-19,Oklahoma,confirmed,44
+2020-03-20,Oklahoma,confirmed,49
+2020-03-21,Oklahoma,confirmed,53
+2020-03-22,Oklahoma,confirmed,67
+2020-03-10,Utah,confirmed,2
+2020-03-11,Utah,confirmed,3
+2020-03-12,Utah,confirmed,5
+2020-03-13,Utah,confirmed,9
+2020-03-14,Utah,confirmed,10
+2020-03-15,Utah,confirmed,28
+2020-03-16,Utah,confirmed,39
+2020-03-17,Utah,confirmed,51
+2020-03-18,Utah,confirmed,51
+2020-03-19,Utah,confirmed,80
+2020-03-20,Utah,confirmed,78
+2020-03-21,Utah,confirmed,136
+2020-03-22,Utah,confirmed,181
+2020-03-10,Kansas,confirmed,1
+2020-03-11,Kansas,confirmed,1
+2020-03-12,Kansas,confirmed,1
+2020-03-13,Kansas,confirmed,5
+2020-03-14,Kansas,confirmed,8
+2020-03-15,Kansas,confirmed,8
+2020-03-16,Kansas,confirmed,11
+2020-03-17,Kansas,confirmed,18
+2020-03-18,Kansas,confirmed,18
+2020-03-19,Kansas,confirmed,34
+2020-03-20,Kansas,confirmed,44
+2020-03-21,Kansas,confirmed,57
+2020-03-22,Kansas,confirmed,64
+2020-03-10,Louisiana,confirmed,1
+2020-03-11,Louisiana,confirmed,6
+2020-03-12,Louisiana,confirmed,19
+2020-03-13,Louisiana,confirmed,36
+2020-03-14,Louisiana,confirmed,77
+2020-03-15,Louisiana,confirmed,91
+2020-03-16,Louisiana,confirmed,136
+2020-03-17,Louisiana,confirmed,196
+2020-03-18,Louisiana,confirmed,257
+2020-03-19,Louisiana,confirmed,392
+2020-03-20,Louisiana,confirmed,538
+2020-03-21,Louisiana,confirmed,585
+2020-03-22,Louisiana,confirmed,837
+2020-03-10,Missouri,confirmed,1
+2020-03-11,Missouri,confirmed,1
+2020-03-12,Missouri,confirmed,1
+2020-03-13,Missouri,confirmed,2
+2020-03-14,Missouri,confirmed,4
+2020-03-15,Missouri,confirmed,5
+2020-03-16,Missouri,confirmed,6
+2020-03-17,Missouri,confirmed,11
+2020-03-18,Missouri,confirmed,18
+2020-03-19,Missouri,confirmed,31
+2020-03-20,Missouri,confirmed,53
+2020-03-21,Missouri,confirmed,74
+2020-03-22,Missouri,confirmed,100
+2020-03-10,Vermont,confirmed,1
+2020-03-11,Vermont,confirmed,1
+2020-03-12,Vermont,confirmed,2
+2020-03-13,Vermont,confirmed,2
+2020-03-14,Vermont,confirmed,5
+2020-03-15,Vermont,confirmed,8
+2020-03-16,Vermont,confirmed,12
+2020-03-17,Vermont,confirmed,12
+2020-03-18,Vermont,confirmed,18
+2020-03-19,Vermont,confirmed,22
+2020-03-20,Vermont,confirmed,29
+2020-03-21,Vermont,confirmed,29
+2020-03-22,Vermont,confirmed,52
+2020-03-13,Alaska,confirmed,1
+2020-03-14,Alaska,confirmed,1
+2020-03-15,Alaska,confirmed,1
+2020-03-16,Alaska,confirmed,1
+2020-03-17,Alaska,confirmed,3
+2020-03-18,Alaska,confirmed,6
+2020-03-19,Alaska,confirmed,9
+2020-03-20,Alaska,confirmed,12
+2020-03-21,Alaska,confirmed,15
+2020-03-22,Alaska,confirmed,21
+2020-03-11,Arkansas,confirmed,1
+2020-03-12,Arkansas,confirmed,6
+2020-03-13,Arkansas,confirmed,6
+2020-03-14,Arkansas,confirmed,12
+2020-03-15,Arkansas,confirmed,16
+2020-03-16,Arkansas,confirmed,22
+2020-03-17,Arkansas,confirmed,22
+2020-03-18,Arkansas,confirmed,33
+2020-03-19,Arkansas,confirmed,62
+2020-03-20,Arkansas,confirmed,96
+2020-03-21,Arkansas,confirmed,122
+2020-03-22,Arkansas,confirmed,165
+2020-03-11,Delaware,confirmed,1
+2020-03-12,Delaware,confirmed,1
+2020-03-13,Delaware,confirmed,4
+2020-03-14,Delaware,confirmed,6
+2020-03-15,Delaware,confirmed,7
+2020-03-16,Delaware,confirmed,8
+2020-03-17,Delaware,confirmed,16
+2020-03-18,Delaware,confirmed,19
+2020-03-19,Delaware,confirmed,30
+2020-03-20,Delaware,confirmed,38
+2020-03-21,Delaware,confirmed,45
+2020-03-22,Delaware,confirmed,47
+2020-03-13,Idaho,confirmed,1
+2020-03-14,Idaho,confirmed,2
+2020-03-15,Idaho,confirmed,5
+2020-03-16,Idaho,confirmed,5
+2020-03-17,Idaho,confirmed,8
+2020-03-18,Idaho,confirmed,9
+2020-03-19,Idaho,confirmed,11
+2020-03-20,Idaho,confirmed,23
+2020-03-21,Idaho,confirmed,36
+2020-03-22,Idaho,confirmed,42
+2020-03-13,Maine,confirmed,1
+2020-03-14,Maine,confirmed,3
+2020-03-15,Maine,confirmed,12
+2020-03-16,Maine,confirmed,17
+2020-03-17,Maine,confirmed,32
+2020-03-18,Maine,confirmed,42
+2020-03-19,Maine,confirmed,52
+2020-03-20,Maine,confirmed,56
+2020-03-21,Maine,confirmed,70
+2020-03-22,Maine,confirmed,89
+2020-03-11,Michigan,confirmed,2
+2020-03-12,Michigan,confirmed,2
+2020-03-13,Michigan,confirmed,16
+2020-03-14,Michigan,confirmed,25
+2020-03-15,Michigan,confirmed,33
+2020-03-16,Michigan,confirmed,53
+2020-03-17,Michigan,confirmed,65
+2020-03-18,Michigan,confirmed,83
+2020-03-19,Michigan,confirmed,334
+2020-03-20,Michigan,confirmed,552
+2020-03-21,Michigan,confirmed,788
+2020-03-22,Michigan,confirmed,1037
+2020-03-12,Mississippi,confirmed,1
+2020-03-13,Mississippi,confirmed,1
+2020-03-14,Mississippi,confirmed,6
+2020-03-15,Mississippi,confirmed,10
+2020-03-16,Mississippi,confirmed,13
+2020-03-17,Mississippi,confirmed,21
+2020-03-18,Mississippi,confirmed,34
+2020-03-19,Mississippi,confirmed,50
+2020-03-20,Mississippi,confirmed,80
+2020-03-21,Mississippi,confirmed,140
+2020-03-22,Mississippi,confirmed,207
+2020-03-11,Montana,confirmed,1
+2020-03-12,Montana,confirmed,1
+2020-03-13,Montana,confirmed,1
+2020-03-14,Montana,confirmed,5
+2020-03-15,Montana,confirmed,7
+2020-03-16,Montana,confirmed,7
+2020-03-17,Montana,confirmed,9
+2020-03-18,Montana,confirmed,11
+2020-03-19,Montana,confirmed,11
+2020-03-20,Montana,confirmed,15
+2020-03-21,Montana,confirmed,21
+2020-03-22,Montana,confirmed,31
+2020-03-11,New Mexico,confirmed,3
+2020-03-12,New Mexico,confirmed,5
+2020-03-13,New Mexico,confirmed,10
+2020-03-14,New Mexico,confirmed,10
+2020-03-15,New Mexico,confirmed,13
+2020-03-16,New Mexico,confirmed,17
+2020-03-17,New Mexico,confirmed,23
+2020-03-18,New Mexico,confirmed,23
+2020-03-19,New Mexico,confirmed,35
+2020-03-20,New Mexico,confirmed,43
+2020-03-21,New Mexico,confirmed,43
+2020-03-22,New Mexico,confirmed,57
+2020-03-12,North Dakota,confirmed,1
+2020-03-13,North Dakota,confirmed,1
+2020-03-14,North Dakota,confirmed,1
+2020-03-15,North Dakota,confirmed,1
+2020-03-16,North Dakota,confirmed,1
+2020-03-17,North Dakota,confirmed,3
+2020-03-18,North Dakota,confirmed,6
+2020-03-19,North Dakota,confirmed,18
+2020-03-20,North Dakota,confirmed,19
+2020-03-21,North Dakota,confirmed,28
+2020-03-22,North Dakota,confirmed,28
+2020-03-11,South Dakota,confirmed,8
+2020-03-12,South Dakota,confirmed,8
+2020-03-13,South Dakota,confirmed,8
+2020-03-14,South Dakota,confirmed,9
+2020-03-15,South Dakota,confirmed,9
+2020-03-16,South Dakota,confirmed,10
+2020-03-17,South Dakota,confirmed,11
+2020-03-18,South Dakota,confirmed,11
+2020-03-19,South Dakota,confirmed,11
+2020-03-20,South Dakota,confirmed,14
+2020-03-21,South Dakota,confirmed,14
+2020-03-22,South Dakota,confirmed,21
+2020-03-17,West Virginia,confirmed,1
+2020-03-18,West Virginia,confirmed,1
+2020-03-19,West Virginia,confirmed,2
+2020-03-20,West Virginia,confirmed,7
+2020-03-21,West Virginia,confirmed,8
+2020-03-22,West Virginia,confirmed,12
+2020-03-12,Wyoming,confirmed,1
+2020-03-13,Wyoming,confirmed,1
+2020-03-14,Wyoming,confirmed,2
+2020-03-15,Wyoming,confirmed,3
+2020-03-16,Wyoming,confirmed,3
+2020-03-17,Wyoming,confirmed,11
+2020-03-18,Wyoming,confirmed,15
+2020-03-19,Wyoming,confirmed,18
+2020-03-20,Wyoming,confirmed,19
+2020-03-21,Wyoming,confirmed,23
+2020-03-22,Wyoming,confirmed,24
+2020-03-08,"Bennington County, VT",confirmed,1
+2020-03-09,"Bennington County, VT",confirmed,1
+2020-03-09,"Carver County, MN",confirmed,1
+2020-03-09,"Charlotte County, FL",confirmed,1
+2020-03-09,"Cherokee County, GA",confirmed,1
+2020-03-09,"Collin County, TX",confirmed,1
+2020-03-09,"Jefferson County, KY",confirmed,1
+2020-03-09,"Jefferson Parish, LA",confirmed,1
+2020-03-09,"Shasta County, CA",confirmed,1
+2020-03-09,"Spartanburg County, SC",confirmed,1
+2020-03-09,"Harrison County, KY",confirmed,2
+2020-03-09,"Johnson County, IA",confirmed,3
+2020-03-08,"Berkshire County, MA",confirmed,1
+2020-03-09,"Berkshire County, MA",confirmed,1
+2020-03-08,"Davidson County, TN",confirmed,1
+2020-03-09,"Davidson County, TN",confirmed,1
+2020-03-08,"Douglas County, OR",confirmed,1
+2020-03-09,"Douglas County, OR",confirmed,1
+2020-03-08,"Fresno County, CA",confirmed,1
+2020-03-09,"Fresno County, CA",confirmed,1
+2020-03-08,"Harford County, MD",confirmed,1
+2020-03-09,"Harford County, MD",confirmed,1
+2020-03-08,"Hendricks County, IN",confirmed,1
+2020-03-09,"Hendricks County, IN",confirmed,2
+2020-03-08,"Hudson County, NJ",confirmed,1
+2020-03-09,"Hudson County, NJ",confirmed,1
+2020-03-08,"Johnson County, KS",confirmed,1
+2020-03-09,"Johnson County, KS",confirmed,1
+2020-03-08,"Kittitas County, WA",confirmed,1
+2020-03-09,"Kittitas County, WA",confirmed,1
+2020-03-08,"Manatee County, FL",confirmed,1
+2020-03-09,"Manatee County, FL",confirmed,2
+2020-03-08,"Marion County, OR",confirmed,1
+2020-03-09,"Marion County, OR",confirmed,1
+2020-03-08,"Okaloosa County, FL",confirmed,1
+2020-03-09,"Okaloosa County, FL",confirmed,1
+2020-03-06,"Polk County, GA",confirmed,1
+2020-03-07,"Polk County, GA",confirmed,1
+2020-03-08,"Polk County, GA",confirmed,1
+2020-03-09,"Polk County, GA",confirmed,1
+2020-03-08,"Riverside County, CA",confirmed,1
+2020-03-09,"Riverside County, CA",confirmed,1
+2020-03-08,"Shelby County, TN",confirmed,1
+2020-03-09,"Shelby County, TN",confirmed,1
+2020-03-08,"St. Louis County, MO",confirmed,1
+2020-03-09,"St. Louis County, MO",confirmed,1
+2020-03-08,"Suffolk County, NY",confirmed,1
+2020-03-09,"Suffolk County, NY",confirmed,1
+2020-03-08,"Ulster County, NY",confirmed,1
+2020-03-09,"Ulster County, NY",confirmed,1
+2020-03-08,"Volusia County, FL",confirmed,1
+2020-03-09,"Volusia County, FL",confirmed,1
+2020-03-08,"Fairfax County, VA",confirmed,2
+2020-03-09,"Fairfax County, VA",confirmed,2
+2020-03-08,"Rockingham County, NH",confirmed,1
+2020-03-09,"Rockingham County, NH",confirmed,1
+2020-03-08,"Washington, D.C.",confirmed,2
+2020-03-09,"Washington, D.C.",confirmed,2
+2020-03-08,"Montgomery County, PA",confirmed,4
+2020-03-09,"Montgomery County, PA",confirmed,5
+2020-03-03,"Alameda County, CA",confirmed,1
+2020-03-04,"Alameda County, CA",confirmed,1
+2020-03-05,"Alameda County, CA",confirmed,1
+2020-03-06,"Alameda County, CA",confirmed,1
+2020-03-07,"Alameda County, CA",confirmed,2
+2020-03-08,"Alameda County, CA",confirmed,2
+2020-03-09,"Alameda County, CA",confirmed,2
+2020-03-07,"Broward County, FL",confirmed,2
+2020-03-08,"Broward County, FL",confirmed,2
+2020-03-09,"Broward County, FL",confirmed,3
+2020-03-07,"Lee County, FL",confirmed,2
+2020-03-08,"Lee County, FL",confirmed,2
+2020-03-09,"Lee County, FL",confirmed,2
+2020-03-07,"Pinal County, AZ",confirmed,2
+2020-03-08,"Pinal County, AZ",confirmed,2
+2020-03-09,"Pinal County, AZ",confirmed,2
+2020-03-07,"Rockland County, NY",confirmed,2
+2020-03-08,"Rockland County, NY",confirmed,2
+2020-03-09,"Rockland County, NY",confirmed,4
+2020-03-07,"Saratoga County, NY",confirmed,2
+2020-03-08,"Saratoga County, NY",confirmed,2
+2020-03-09,"Saratoga County, NY",confirmed,2
+2020-03-07,"Charleston County, SC",confirmed,1
+2020-03-08,"Charleston County, SC",confirmed,1
+2020-03-09,"Charleston County, SC",confirmed,1
+2020-03-07,"Clark County, WA",confirmed,1
+2020-03-08,"Clark County, WA",confirmed,1
+2020-03-09,"Clark County, WA",confirmed,1
+2020-03-07,"Cobb County, GA",confirmed,1
+2020-03-08,"Cobb County, GA",confirmed,1
+2020-03-09,"Cobb County, GA",confirmed,3
+2020-03-07,"Davis County, UT",confirmed,1
+2020-03-08,"Davis County, UT",confirmed,1
+2020-03-09,"Davis County, UT",confirmed,1
+2020-03-07,"El Paso County, CO",confirmed,1
+2020-03-08,"El Paso County, CO",confirmed,1
+2020-03-09,"El Paso County, CO",confirmed,1
+2020-03-07,"Honolulu County, HI",confirmed,1
+2020-03-08,"Honolulu County, HI",confirmed,1
+2020-03-09,"Honolulu County, HI",confirmed,1
+2020-03-07,"Jackson County, OR ",confirmed,1
+2020-03-08,"Jackson County, OR ",confirmed,2
+2020-03-09,"Jackson County, OR ",confirmed,2
+2020-03-07,"Jefferson County, WA",confirmed,1
+2020-03-08,"Jefferson County, WA",confirmed,1
+2020-03-09,"Jefferson County, WA",confirmed,1
+2020-03-07,"Kershaw County, SC",confirmed,1
+2020-03-08,"Kershaw County, SC",confirmed,1
+2020-03-09,"Kershaw County, SC",confirmed,1
+2020-03-07,"Klamath County, OR",confirmed,1
+2020-03-08,"Klamath County, OR",confirmed,1
+2020-03-09,"Klamath County, OR",confirmed,1
+2020-03-07,"Madera County, CA",confirmed,1
+2020-03-08,"Madera County, CA",confirmed,1
+2020-03-09,"Madera County, CA",confirmed,1
+2020-03-07,"Pierce County, WA",confirmed,1
+2020-03-08,"Pierce County, WA",confirmed,4
+2020-03-09,"Pierce County, WA",confirmed,4
+2020-03-07,"Tulsa County, OK",confirmed,1
+2020-03-08,"Tulsa County, OK",confirmed,1
+2020-03-09,"Tulsa County, OK",confirmed,1
+2020-03-07,"Douglas County, CO",confirmed,3
+2020-03-08,"Douglas County, CO",confirmed,3
+2020-03-09,"Douglas County, CO",confirmed,3
+2020-03-01,"Providence County, RI",confirmed,1
+2020-03-02,"Providence County, RI",confirmed,2
+2020-03-03,"Providence County, RI",confirmed,2
+2020-03-04,"Providence County, RI",confirmed,2
+2020-03-05,"Providence County, RI",confirmed,2
+2020-03-06,"Providence County, RI",confirmed,2
+2020-03-07,"Providence County, RI",confirmed,3
+2020-03-08,"Providence County, RI",confirmed,3
+2020-03-09,"Providence County, RI",confirmed,3
+2020-03-06,"Chatham County, NC",confirmed,1
+2020-03-07,"Chatham County, NC",confirmed,1
+2020-03-08,"Chatham County, NC",confirmed,1
+2020-03-09,"Chatham County, NC",confirmed,1
+2020-03-06,"Delaware County, PA",confirmed,1
+2020-03-07,"Delaware County, PA",confirmed,1
+2020-03-08,"Delaware County, PA",confirmed,1
+2020-03-09,"Delaware County, PA",confirmed,1
+2020-03-06,"Douglas County, NE",confirmed,1
+2020-03-07,"Douglas County, NE",confirmed,1
+2020-03-08,"Douglas County, NE",confirmed,1
+2020-03-09,"Douglas County, NE",confirmed,3
+2020-03-06,"Fayette County, KY",confirmed,1
+2020-03-07,"Fayette County, KY",confirmed,1
+2020-03-08,"Fayette County, KY",confirmed,1
+2020-03-09,"Fayette County, KY",confirmed,1
+2020-03-06,"Marion County, IN",confirmed,1
+2020-03-07,"Marion County, IN",confirmed,1
+2020-03-08,"Marion County, IN",confirmed,1
+2020-03-09,"Marion County, IN",confirmed,1
+2020-03-06,"Middlesex County, MA",confirmed,1
+2020-03-07,"Middlesex County, MA",confirmed,1
+2020-03-08,"Middlesex County, MA",confirmed,7
+2020-03-09,"Middlesex County, MA",confirmed,7
+2020-03-05,"Nassau County, NY",confirmed,1
+2020-03-06,"Nassau County, NY",confirmed,1
+2020-03-07,"Nassau County, NY",confirmed,4
+2020-03-08,"Nassau County, NY",confirmed,5
+2020-03-09,"Nassau County, NY",confirmed,17
+2020-03-06,"Ramsey County, MN",confirmed,1
+2020-03-07,"Ramsey County, MN",confirmed,1
+2020-03-08,"Ramsey County, MN",confirmed,1
+2020-03-09,"Ramsey County, MN",confirmed,1
+2020-03-06,"Washoe County, NV",confirmed,1
+2020-03-07,"Washoe County, NV",confirmed,1
+2020-03-08,"Washoe County, NV",confirmed,2
+2020-03-09,"Washoe County, NV",confirmed,2
+2020-03-06,"Wayne County, PA",confirmed,1
+2020-03-07,"Wayne County, PA",confirmed,1
+2020-03-08,"Wayne County, PA",confirmed,1
+2020-03-09,"Wayne County, PA",confirmed,1
+2020-03-06,"Yolo County, CA",confirmed,1
+2020-03-07,"Yolo County, CA",confirmed,1
+2020-03-08,"Yolo County, CA",confirmed,1
+2020-03-09,"Yolo County, CA",confirmed,1
+2020-01-31,"Santa Clara County, CA",confirmed,1
+2020-02-01,"Santa Clara County, CA",confirmed,1
+2020-02-02,"Santa Clara County, CA",confirmed,1
+2020-02-03,"Santa Clara County, CA",confirmed,2
+2020-02-04,"Santa Clara County, CA",confirmed,2
+2020-02-05,"Santa Clara County, CA",confirmed,2
+2020-02-06,"Santa Clara County, CA",confirmed,2
+2020-02-07,"Santa Clara County, CA",confirmed,2
+2020-02-08,"Santa Clara County, CA",confirmed,2
+2020-02-09,"Santa Clara County, CA",confirmed,2
+2020-02-10,"Santa Clara County, CA",confirmed,2
+2020-02-11,"Santa Clara County, CA",confirmed,2
+2020-02-12,"Santa Clara County, CA",confirmed,2
+2020-02-13,"Santa Clara County, CA",confirmed,2
+2020-02-14,"Santa Clara County, CA",confirmed,2
+2020-02-15,"Santa Clara County, CA",confirmed,2
+2020-02-16,"Santa Clara County, CA",confirmed,2
+2020-02-17,"Santa Clara County, CA",confirmed,2
+2020-02-18,"Santa Clara County, CA",confirmed,2
+2020-02-19,"Santa Clara County, CA",confirmed,2
+2020-02-20,"Santa Clara County, CA",confirmed,2
+2020-02-21,"Santa Clara County, CA",confirmed,2
+2020-02-22,"Santa Clara County, CA",confirmed,2
+2020-02-23,"Santa Clara County, CA",confirmed,2
+2020-02-24,"Santa Clara County, CA",confirmed,2
+2020-02-25,"Santa Clara County, CA",confirmed,2
+2020-02-26,"Santa Clara County, CA",confirmed,2
+2020-02-27,"Santa Clara County, CA",confirmed,2
+2020-02-28,"Santa Clara County, CA",confirmed,2
+2020-02-29,"Santa Clara County, CA",confirmed,3
+2020-03-01,"Santa Clara County, CA",confirmed,3
+2020-03-02,"Santa Clara County, CA",confirmed,9
+2020-03-03,"Santa Clara County, CA",confirmed,11
+2020-03-04,"Santa Clara County, CA",confirmed,11
+2020-03-05,"Santa Clara County, CA",confirmed,20
+2020-03-06,"Santa Clara County, CA",confirmed,20
+2020-03-07,"Santa Clara County, CA",confirmed,32
+2020-03-08,"Santa Clara County, CA",confirmed,38
+2020-03-09,"Santa Clara County, CA",confirmed,38
+2020-03-05,"Clark County, NV",confirmed,1
+2020-03-06,"Clark County, NV",confirmed,1
+2020-03-07,"Clark County, NV",confirmed,1
+2020-03-08,"Clark County, NV",confirmed,2
+2020-03-09,"Clark County, NV",confirmed,2
+2020-03-05,"Fort Bend County, TX",confirmed,1
+2020-03-06,"Fort Bend County, TX",confirmed,1
+2020-03-07,"Fort Bend County, TX",confirmed,3
+2020-03-08,"Fort Bend County, TX",confirmed,6
+2020-03-09,"Fort Bend County, TX",confirmed,6
+2020-03-05,"Grant County, WA",confirmed,1
+2020-03-06,"Grant County, WA",confirmed,1
+2020-03-07,"Grant County, WA",confirmed,1
+2020-03-08,"Grant County, WA",confirmed,1
+2020-03-09,"Grant County, WA",confirmed,1
+2020-03-05,"Santa Rosa County, FL",confirmed,1
+2020-03-06,"Santa Rosa County, FL",confirmed,1
+2020-03-07,"Santa Rosa County, FL",confirmed,1
+2020-03-08,"Santa Rosa County, FL",confirmed,1
+2020-03-09,"Santa Rosa County, FL",confirmed,1
+2020-03-05,"Williamson County, TN",confirmed,1
+2020-03-06,"Williamson County, TN",confirmed,1
+2020-03-07,"Williamson County, TN",confirmed,1
+2020-03-08,"Williamson County, TN",confirmed,1
+2020-03-09,"Williamson County, TN",confirmed,1
+2020-03-02,"New York County, NY",confirmed,1
+2020-03-03,"New York County, NY",confirmed,1
+2020-03-04,"New York County, NY",confirmed,1
+2020-03-05,"New York County, NY",confirmed,4
+2020-03-06,"New York County, NY",confirmed,11
+2020-03-07,"New York County, NY",confirmed,11
+2020-03-08,"New York County, NY",confirmed,12
+2020-03-09,"New York County, NY",confirmed,19
+2020-03-06,"Montgomery County, MD",confirmed,3
+2020-03-07,"Montgomery County, MD",confirmed,3
+2020-03-08,"Montgomery County, MD",confirmed,4
+2020-03-09,"Montgomery County, MD",confirmed,4
+2020-02-01,"Suffolk County, MA",confirmed,1
+2020-02-02,"Suffolk County, MA",confirmed,1
+2020-02-03,"Suffolk County, MA",confirmed,1
+2020-02-04,"Suffolk County, MA",confirmed,1
+2020-02-05,"Suffolk County, MA",confirmed,1
+2020-02-06,"Suffolk County, MA",confirmed,1
+2020-02-07,"Suffolk County, MA",confirmed,1
+2020-02-08,"Suffolk County, MA",confirmed,1
+2020-02-09,"Suffolk County, MA",confirmed,1
+2020-02-10,"Suffolk County, MA",confirmed,1
+2020-02-11,"Suffolk County, MA",confirmed,1
+2020-02-12,"Suffolk County, MA",confirmed,1
+2020-02-13,"Suffolk County, MA",confirmed,1
+2020-02-14,"Suffolk County, MA",confirmed,1
+2020-02-15,"Suffolk County, MA",confirmed,1
+2020-02-16,"Suffolk County, MA",confirmed,1
+2020-02-17,"Suffolk County, MA",confirmed,1
+2020-02-18,"Suffolk County, MA",confirmed,1
+2020-02-19,"Suffolk County, MA",confirmed,1
+2020-02-20,"Suffolk County, MA",confirmed,1
+2020-02-21,"Suffolk County, MA",confirmed,1
+2020-02-22,"Suffolk County, MA",confirmed,1
+2020-02-23,"Suffolk County, MA",confirmed,1
+2020-02-24,"Suffolk County, MA",confirmed,1
+2020-02-25,"Suffolk County, MA",confirmed,1
+2020-02-26,"Suffolk County, MA",confirmed,1
+2020-02-27,"Suffolk County, MA",confirmed,1
+2020-02-28,"Suffolk County, MA",confirmed,1
+2020-02-29,"Suffolk County, MA",confirmed,1
+2020-03-01,"Suffolk County, MA",confirmed,1
+2020-03-02,"Suffolk County, MA",confirmed,1
+2020-03-03,"Suffolk County, MA",confirmed,1
+2020-03-04,"Suffolk County, MA",confirmed,1
+2020-03-05,"Suffolk County, MA",confirmed,1
+2020-03-06,"Suffolk County, MA",confirmed,3
+2020-03-07,"Suffolk County, MA",confirmed,3
+2020-03-08,"Suffolk County, MA",confirmed,8
+2020-03-09,"Suffolk County, MA",confirmed,8
+2020-03-06,"Denver County, CO",confirmed,2
+2020-03-07,"Denver County, CO",confirmed,2
+2020-03-08,"Denver County, CO",confirmed,2
+2020-03-09,"Denver County, CO",confirmed,2
+2020-03-06,"Summit County, CO",confirmed,1
+2020-03-07,"Summit County, CO",confirmed,1
+2020-03-08,"Summit County, CO",confirmed,1
+2020-03-09,"Summit County, CO",confirmed,1
+2020-03-05,"Bergen County, NJ",confirmed,2
+2020-03-06,"Bergen County, NJ",confirmed,2
+2020-03-07,"Bergen County, NJ",confirmed,4
+2020-03-08,"Bergen County, NJ",confirmed,4
+2020-03-09,"Bergen County, NJ",confirmed,4
+2020-03-05,"Harris County, TX",confirmed,2
+2020-03-06,"Harris County, TX",confirmed,3
+2020-03-07,"Harris County, TX",confirmed,5
+2020-03-08,"Harris County, TX",confirmed,5
+2020-03-09,"Harris County, TX",confirmed,6
+2020-03-05,"San Francisco County, CA",confirmed,2
+2020-03-06,"San Francisco County, CA",confirmed,2
+2020-03-07,"San Francisco County, CA",confirmed,9
+2020-03-08,"San Francisco County, CA",confirmed,9
+2020-03-09,"San Francisco County, CA",confirmed,9
+2020-03-04,"Contra Costa County, CA",confirmed,1
+2020-03-05,"Contra Costa County, CA",confirmed,1
+2020-03-06,"Contra Costa County, CA",confirmed,3
+2020-03-07,"Contra Costa County, CA",confirmed,3
+2020-03-08,"Contra Costa County, CA",confirmed,9
+2020-03-09,"Contra Costa County, CA",confirmed,9
+2020-01-26,"Orange County, CA",confirmed,1
+2020-01-27,"Orange County, CA",confirmed,1
+2020-01-28,"Orange County, CA",confirmed,1
+2020-01-29,"Orange County, CA",confirmed,1
+2020-01-30,"Orange County, CA",confirmed,1
+2020-01-31,"Orange County, CA",confirmed,1
+2020-02-01,"Orange County, CA",confirmed,1
+2020-02-02,"Orange County, CA",confirmed,1
+2020-02-03,"Orange County, CA",confirmed,1
+2020-02-04,"Orange County, CA",confirmed,1
+2020-02-05,"Orange County, CA",confirmed,1
+2020-02-06,"Orange County, CA",confirmed,1
+2020-02-07,"Orange County, CA",confirmed,1
+2020-02-08,"Orange County, CA",confirmed,1
+2020-02-09,"Orange County, CA",confirmed,1
+2020-02-10,"Orange County, CA",confirmed,1
+2020-02-11,"Orange County, CA",confirmed,1
+2020-02-12,"Orange County, CA",confirmed,1
+2020-02-13,"Orange County, CA",confirmed,1
+2020-02-14,"Orange County, CA",confirmed,1
+2020-02-15,"Orange County, CA",confirmed,1
+2020-02-16,"Orange County, CA",confirmed,1
+2020-02-17,"Orange County, CA",confirmed,1
+2020-02-18,"Orange County, CA",confirmed,1
+2020-02-19,"Orange County, CA",confirmed,1
+2020-02-20,"Orange County, CA",confirmed,1
+2020-02-21,"Orange County, CA",confirmed,1
+2020-02-22,"Orange County, CA",confirmed,1
+2020-02-23,"Orange County, CA",confirmed,1
+2020-02-24,"Orange County, CA",confirmed,1
+2020-02-25,"Orange County, CA",confirmed,1
+2020-02-26,"Orange County, CA",confirmed,1
+2020-02-27,"Orange County, CA",confirmed,1
+2020-02-28,"Orange County, CA",confirmed,1
+2020-02-29,"Orange County, CA",confirmed,1
+2020-03-01,"Orange County, CA",confirmed,1
+2020-03-02,"Orange County, CA",confirmed,1
+2020-03-03,"Orange County, CA",confirmed,1
+2020-03-04,"Orange County, CA",confirmed,3
+2020-03-05,"Orange County, CA",confirmed,3
+2020-03-06,"Orange County, CA",confirmed,3
+2020-03-07,"Orange County, CA",confirmed,3
+2020-03-08,"Orange County, CA",confirmed,3
+2020-03-09,"Orange County, CA",confirmed,4
+2020-03-03,"Norfolk County, MA",confirmed,1
+2020-03-04,"Norfolk County, MA",confirmed,1
+2020-03-05,"Norfolk County, MA",confirmed,1
+2020-03-06,"Norfolk County, MA",confirmed,2
+2020-03-07,"Norfolk County, MA",confirmed,2
+2020-03-08,"Norfolk County, MA",confirmed,6
+2020-03-09,"Norfolk County, MA",confirmed,6
+2020-01-26,"Maricopa County, AZ",confirmed,1
+2020-01-27,"Maricopa County, AZ",confirmed,1
+2020-01-28,"Maricopa County, AZ",confirmed,1
+2020-01-29,"Maricopa County, AZ",confirmed,1
+2020-01-30,"Maricopa County, AZ",confirmed,1
+2020-01-31,"Maricopa County, AZ",confirmed,1
+2020-02-01,"Maricopa County, AZ",confirmed,1
+2020-02-02,"Maricopa County, AZ",confirmed,1
+2020-02-03,"Maricopa County, AZ",confirmed,1
+2020-02-04,"Maricopa County, AZ",confirmed,1
+2020-02-05,"Maricopa County, AZ",confirmed,1
+2020-02-06,"Maricopa County, AZ",confirmed,1
+2020-02-07,"Maricopa County, AZ",confirmed,1
+2020-02-08,"Maricopa County, AZ",confirmed,1
+2020-02-09,"Maricopa County, AZ",confirmed,1
+2020-02-10,"Maricopa County, AZ",confirmed,1
+2020-02-11,"Maricopa County, AZ",confirmed,1
+2020-02-12,"Maricopa County, AZ",confirmed,1
+2020-02-13,"Maricopa County, AZ",confirmed,1
+2020-02-14,"Maricopa County, AZ",confirmed,1
+2020-02-15,"Maricopa County, AZ",confirmed,1
+2020-02-16,"Maricopa County, AZ",confirmed,1
+2020-02-17,"Maricopa County, AZ",confirmed,1
+2020-02-18,"Maricopa County, AZ",confirmed,1
+2020-02-19,"Maricopa County, AZ",confirmed,1
+2020-02-20,"Maricopa County, AZ",confirmed,1
+2020-02-21,"Maricopa County, AZ",confirmed,1
+2020-02-22,"Maricopa County, AZ",confirmed,1
+2020-02-23,"Maricopa County, AZ",confirmed,1
+2020-02-24,"Maricopa County, AZ",confirmed,1
+2020-02-25,"Maricopa County, AZ",confirmed,1
+2020-02-26,"Maricopa County, AZ",confirmed,1
+2020-02-27,"Maricopa County, AZ",confirmed,1
+2020-02-28,"Maricopa County, AZ",confirmed,1
+2020-02-29,"Maricopa County, AZ",confirmed,1
+2020-03-01,"Maricopa County, AZ",confirmed,1
+2020-03-02,"Maricopa County, AZ",confirmed,1
+2020-03-03,"Maricopa County, AZ",confirmed,1
+2020-03-04,"Maricopa County, AZ",confirmed,1
+2020-03-05,"Maricopa County, AZ",confirmed,1
+2020-03-06,"Maricopa County, AZ",confirmed,2
+2020-03-07,"Maricopa County, AZ",confirmed,2
+2020-03-08,"Maricopa County, AZ",confirmed,2
+2020-03-09,"Maricopa County, AZ",confirmed,2
+2020-03-03,"Wake County, NC",confirmed,1
+2020-03-04,"Wake County, NC",confirmed,1
+2020-03-05,"Wake County, NC",confirmed,1
+2020-03-06,"Wake County, NC",confirmed,1
+2020-03-07,"Wake County, NC",confirmed,1
+2020-03-08,"Wake County, NC",confirmed,1
+2020-03-09,"Wake County, NC",confirmed,1
+2020-03-03,"Westchester County, NY",confirmed,1
+2020-03-04,"Westchester County, NY",confirmed,10
+2020-03-05,"Westchester County, NY",confirmed,18
+2020-03-06,"Westchester County, NY",confirmed,19
+2020-03-07,"Westchester County, NY",confirmed,57
+2020-03-08,"Westchester County, NY",confirmed,83
+2020-03-09,"Westchester County, NY",confirmed,98
+2020-03-02,"Grafton County, NH",confirmed,1
+2020-03-03,"Grafton County, NH",confirmed,2
+2020-03-04,"Grafton County, NH",confirmed,2
+2020-03-05,"Grafton County, NH",confirmed,2
+2020-03-06,"Grafton County, NH",confirmed,2
+2020-03-07,"Grafton County, NH",confirmed,2
+2020-03-08,"Grafton County, NH",confirmed,3
+2020-03-09,"Grafton County, NH",confirmed,3
+2020-03-02,"Hillsborough, FL",confirmed,1
+2020-03-03,"Hillsborough, FL",confirmed,2
+2020-03-04,"Hillsborough, FL",confirmed,2
+2020-03-05,"Hillsborough, FL",confirmed,2
+2020-03-06,"Hillsborough, FL",confirmed,2
+2020-03-07,"Hillsborough, FL",confirmed,2
+2020-03-08,"Hillsborough, FL",confirmed,2
+2020-03-09,"Hillsborough, FL",confirmed,2
+2020-03-02,"Placer County, CA",confirmed,1
+2020-03-03,"Placer County, CA",confirmed,1
+2020-03-04,"Placer County, CA",confirmed,2
+2020-03-05,"Placer County, CA",confirmed,2
+2020-03-06,"Placer County, CA",confirmed,5
+2020-03-07,"Placer County, CA",confirmed,5
+2020-03-08,"Placer County, CA",confirmed,5
+2020-03-09,"Placer County, CA",confirmed,7
+2020-03-02,"San Mateo, CA",confirmed,1
+2020-03-03,"San Mateo, CA",confirmed,2
+2020-03-04,"San Mateo, CA",confirmed,2
+2020-03-05,"San Mateo, CA",confirmed,2
+2020-03-06,"San Mateo, CA",confirmed,2
+2020-03-07,"San Mateo, CA",confirmed,2
+2020-03-08,"San Mateo, CA",confirmed,2
+2020-03-09,"San Mateo, CA",confirmed,2
+2020-03-02,"Sonoma County, CA",confirmed,1
+2020-03-03,"Sonoma County, CA",confirmed,1
+2020-03-04,"Sonoma County, CA",confirmed,1
+2020-03-05,"Sonoma County, CA",confirmed,1
+2020-03-06,"Sonoma County, CA",confirmed,1
+2020-03-07,"Sonoma County, CA",confirmed,1
+2020-03-08,"Sonoma County, CA",confirmed,1
+2020-03-09,"Sonoma County, CA",confirmed,3
+2020-03-02,"Umatilla, OR",confirmed,1
+2020-03-03,"Umatilla, OR",confirmed,1
+2020-03-04,"Umatilla, OR",confirmed,1
+2020-03-05,"Umatilla, OR",confirmed,1
+2020-03-06,"Umatilla, OR",confirmed,1
+2020-03-07,"Umatilla, OR",confirmed,1
+2020-03-08,"Umatilla, OR",confirmed,1
+2020-03-09,"Umatilla, OR",confirmed,1
+2020-03-03,"Fulton County, GA",confirmed,2
+2020-03-04,"Fulton County, GA",confirmed,2
+2020-03-05,"Fulton County, GA",confirmed,2
+2020-03-06,"Fulton County, GA",confirmed,2
+2020-03-07,"Fulton County, GA",confirmed,3
+2020-03-08,"Fulton County, GA",confirmed,3
+2020-03-09,"Fulton County, GA",confirmed,5
+2020-02-29,"Washington County, OR",confirmed,1
+2020-03-01,"Washington County, OR",confirmed,1
+2020-03-02,"Washington County, OR",confirmed,2
+2020-03-03,"Washington County, OR",confirmed,2
+2020-03-04,"Washington County, OR",confirmed,2
+2020-03-05,"Washington County, OR",confirmed,2
+2020-03-06,"Washington County, OR",confirmed,2
+2020-03-07,"Washington County, OR",confirmed,3
+2020-03-08,"Washington County, OR",confirmed,8
+2020-03-09,"Washington County, OR",confirmed,8
+2020-02-29,"Snohomish County, WA",confirmed,1
+2020-03-01,"Snohomish County, WA",confirmed,2
+2020-03-02,"Snohomish County, WA",confirmed,4
+2020-03-03,"Snohomish County, WA",confirmed,6
+2020-03-04,"Snohomish County, WA",confirmed,8
+2020-03-05,"Snohomish County, WA",confirmed,18
+2020-03-06,"Snohomish County, WA",confirmed,19
+2020-03-07,"Snohomish County, WA",confirmed,27
+2020-03-08,"Snohomish County, WA",confirmed,31
+2020-03-09,"Snohomish County, WA",confirmed,31
+2020-02-21,"Humboldt County, CA",confirmed,1
+2020-02-22,"Humboldt County, CA",confirmed,1
+2020-02-23,"Humboldt County, CA",confirmed,1
+2020-02-24,"Humboldt County, CA",confirmed,1
+2020-02-25,"Humboldt County, CA",confirmed,1
+2020-02-26,"Humboldt County, CA",confirmed,1
+2020-02-27,"Humboldt County, CA",confirmed,1
+2020-02-28,"Humboldt County, CA",confirmed,1
+2020-02-29,"Humboldt County, CA",confirmed,1
+2020-03-01,"Humboldt County, CA",confirmed,1
+2020-03-02,"Humboldt County, CA",confirmed,1
+2020-03-03,"Humboldt County, CA",confirmed,1
+2020-03-04,"Humboldt County, CA",confirmed,1
+2020-03-05,"Humboldt County, CA",confirmed,1
+2020-03-06,"Humboldt County, CA",confirmed,1
+2020-03-07,"Humboldt County, CA",confirmed,1
+2020-03-08,"Humboldt County, CA",confirmed,1
+2020-03-09,"Humboldt County, CA",confirmed,1
+2020-02-21,"Sacramento County, CA",confirmed,1
+2020-02-22,"Sacramento County, CA",confirmed,1
+2020-02-23,"Sacramento County, CA",confirmed,1
+2020-02-24,"Sacramento County, CA",confirmed,1
+2020-02-25,"Sacramento County, CA",confirmed,1
+2020-02-26,"Sacramento County, CA",confirmed,1
+2020-02-27,"Sacramento County, CA",confirmed,2
+2020-02-28,"Sacramento County, CA",confirmed,2
+2020-02-29,"Sacramento County, CA",confirmed,2
+2020-03-01,"Sacramento County, CA",confirmed,2
+2020-03-02,"Sacramento County, CA",confirmed,2
+2020-03-03,"Sacramento County, CA",confirmed,2
+2020-03-04,"Sacramento County, CA",confirmed,2
+2020-03-05,"Sacramento County, CA",confirmed,2
+2020-03-06,"Sacramento County, CA",confirmed,2
+2020-03-07,"Sacramento County, CA",confirmed,2
+2020-03-08,"Sacramento County, CA",confirmed,2
+2020-03-09,"Sacramento County, CA",confirmed,2
+2020-02-11,"San Diego County, CA",confirmed,1
+2020-02-12,"San Diego County, CA",confirmed,1
+2020-02-13,"San Diego County, CA",confirmed,2
+2020-02-14,"San Diego County, CA",confirmed,2
+2020-02-15,"San Diego County, CA",confirmed,2
+2020-02-16,"San Diego County, CA",confirmed,2
+2020-02-17,"San Diego County, CA",confirmed,2
+2020-02-18,"San Diego County, CA",confirmed,2
+2020-02-19,"San Diego County, CA",confirmed,2
+2020-02-20,"San Diego County, CA",confirmed,2
+2020-02-21,"San Diego County, CA",confirmed,2
+2020-02-22,"San Diego County, CA",confirmed,2
+2020-02-23,"San Diego County, CA",confirmed,2
+2020-02-24,"San Diego County, CA",confirmed,2
+2020-02-25,"San Diego County, CA",confirmed,2
+2020-02-26,"San Diego County, CA",confirmed,2
+2020-02-27,"San Diego County, CA",confirmed,2
+2020-02-28,"San Diego County, CA",confirmed,2
+2020-02-29,"San Diego County, CA",confirmed,2
+2020-03-01,"San Diego County, CA",confirmed,2
+2020-03-02,"San Diego County, CA",confirmed,2
+2020-03-03,"San Diego County, CA",confirmed,2
+2020-03-04,"San Diego County, CA",confirmed,2
+2020-03-05,"San Diego County, CA",confirmed,3
+2020-03-06,"San Diego County, CA",confirmed,3
+2020-03-07,"San Diego County, CA",confirmed,3
+2020-03-08,"San Diego County, CA",confirmed,3
+2020-03-09,"San Diego County, CA",confirmed,3
+2020-02-03,"San Benito, CA",confirmed,2
+2020-02-04,"San Benito, CA",confirmed,2
+2020-02-05,"San Benito, CA",confirmed,2
+2020-02-06,"San Benito, CA",confirmed,2
+2020-02-07,"San Benito, CA",confirmed,2
+2020-02-08,"San Benito, CA",confirmed,2
+2020-02-09,"San Benito, CA",confirmed,2
+2020-02-10,"San Benito, CA",confirmed,2
+2020-02-11,"San Benito, CA",confirmed,2
+2020-02-12,"San Benito, CA",confirmed,2
+2020-02-13,"San Benito, CA",confirmed,2
+2020-02-14,"San Benito, CA",confirmed,2
+2020-02-15,"San Benito, CA",confirmed,2
+2020-02-16,"San Benito, CA",confirmed,2
+2020-02-17,"San Benito, CA",confirmed,2
+2020-02-18,"San Benito, CA",confirmed,2
+2020-02-19,"San Benito, CA",confirmed,2
+2020-02-20,"San Benito, CA",confirmed,2
+2020-02-21,"San Benito, CA",confirmed,2
+2020-02-22,"San Benito, CA",confirmed,2
+2020-02-23,"San Benito, CA",confirmed,2
+2020-02-24,"San Benito, CA",confirmed,2
+2020-02-25,"San Benito, CA",confirmed,2
+2020-02-26,"San Benito, CA",confirmed,2
+2020-02-27,"San Benito, CA",confirmed,2
+2020-02-28,"San Benito, CA",confirmed,2
+2020-02-29,"San Benito, CA",confirmed,2
+2020-03-01,"San Benito, CA",confirmed,2
+2020-03-02,"San Benito, CA",confirmed,2
+2020-03-03,"San Benito, CA",confirmed,2
+2020-03-04,"San Benito, CA",confirmed,2
+2020-03-05,"San Benito, CA",confirmed,2
+2020-03-06,"San Benito, CA",confirmed,2
+2020-03-07,"San Benito, CA",confirmed,2
+2020-03-08,"San Benito, CA",confirmed,2
+2020-03-09,"San Benito, CA",confirmed,2
+2020-01-26,"Los Angeles, CA",confirmed,1
+2020-01-27,"Los Angeles, CA",confirmed,1
+2020-01-28,"Los Angeles, CA",confirmed,1
+2020-01-29,"Los Angeles, CA",confirmed,1
+2020-01-30,"Los Angeles, CA",confirmed,1
+2020-01-31,"Los Angeles, CA",confirmed,1
+2020-02-01,"Los Angeles, CA",confirmed,1
+2020-02-02,"Los Angeles, CA",confirmed,1
+2020-02-03,"Los Angeles, CA",confirmed,1
+2020-02-04,"Los Angeles, CA",confirmed,1
+2020-02-05,"Los Angeles, CA",confirmed,1
+2020-02-06,"Los Angeles, CA",confirmed,1
+2020-02-07,"Los Angeles, CA",confirmed,1
+2020-02-08,"Los Angeles, CA",confirmed,1
+2020-02-09,"Los Angeles, CA",confirmed,1
+2020-02-10,"Los Angeles, CA",confirmed,1
+2020-02-11,"Los Angeles, CA",confirmed,1
+2020-02-12,"Los Angeles, CA",confirmed,1
+2020-02-13,"Los Angeles, CA",confirmed,1
+2020-02-14,"Los Angeles, CA",confirmed,1
+2020-02-15,"Los Angeles, CA",confirmed,1
+2020-02-16,"Los Angeles, CA",confirmed,1
+2020-02-17,"Los Angeles, CA",confirmed,1
+2020-02-18,"Los Angeles, CA",confirmed,1
+2020-02-19,"Los Angeles, CA",confirmed,1
+2020-02-20,"Los Angeles, CA",confirmed,1
+2020-02-21,"Los Angeles, CA",confirmed,1
+2020-02-22,"Los Angeles, CA",confirmed,1
+2020-02-23,"Los Angeles, CA",confirmed,1
+2020-02-24,"Los Angeles, CA",confirmed,1
+2020-02-25,"Los Angeles, CA",confirmed,1
+2020-02-26,"Los Angeles, CA",confirmed,1
+2020-02-27,"Los Angeles, CA",confirmed,1
+2020-02-28,"Los Angeles, CA",confirmed,1
+2020-02-29,"Los Angeles, CA",confirmed,1
+2020-03-01,"Los Angeles, CA",confirmed,1
+2020-03-02,"Los Angeles, CA",confirmed,1
+2020-03-03,"Los Angeles, CA",confirmed,1
+2020-03-04,"Los Angeles, CA",confirmed,7
+2020-03-05,"Los Angeles, CA",confirmed,11
+2020-03-06,"Los Angeles, CA",confirmed,13
+2020-03-07,"Los Angeles, CA",confirmed,14
+2020-03-08,"Los Angeles, CA",confirmed,14
+2020-03-09,"Los Angeles, CA",confirmed,14
+2020-01-22,"King County, WA",confirmed,1
+2020-01-23,"King County, WA",confirmed,1
+2020-01-24,"King County, WA",confirmed,1
+2020-01-25,"King County, WA",confirmed,1
+2020-01-26,"King County, WA",confirmed,1
+2020-01-27,"King County, WA",confirmed,1
+2020-01-28,"King County, WA",confirmed,1
+2020-01-29,"King County, WA",confirmed,1
+2020-01-30,"King County, WA",confirmed,1
+2020-01-31,"King County, WA",confirmed,1
+2020-02-01,"King County, WA",confirmed,1
+2020-02-02,"King County, WA",confirmed,1
+2020-02-03,"King County, WA",confirmed,1
+2020-02-04,"King County, WA",confirmed,1
+2020-02-05,"King County, WA",confirmed,1
+2020-02-06,"King County, WA",confirmed,1
+2020-02-07,"King County, WA",confirmed,1
+2020-02-08,"King County, WA",confirmed,1
+2020-02-09,"King County, WA",confirmed,1
+2020-02-10,"King County, WA",confirmed,1
+2020-02-11,"King County, WA",confirmed,1
+2020-02-12,"King County, WA",confirmed,1
+2020-02-13,"King County, WA",confirmed,1
+2020-02-14,"King County, WA",confirmed,1
+2020-02-15,"King County, WA",confirmed,1
+2020-02-16,"King County, WA",confirmed,1
+2020-02-17,"King County, WA",confirmed,1
+2020-02-18,"King County, WA",confirmed,1
+2020-02-19,"King County, WA",confirmed,1
+2020-02-20,"King County, WA",confirmed,1
+2020-02-21,"King County, WA",confirmed,1
+2020-02-22,"King County, WA",confirmed,1
+2020-02-23,"King County, WA",confirmed,1
+2020-02-24,"King County, WA",confirmed,1
+2020-02-25,"King County, WA",confirmed,1
+2020-02-26,"King County, WA",confirmed,1
+2020-02-27,"King County, WA",confirmed,1
+2020-02-28,"King County, WA",confirmed,1
+2020-02-29,"King County, WA",confirmed,6
+2020-03-01,"King County, WA",confirmed,9
+2020-03-02,"King County, WA",confirmed,14
+2020-03-03,"King County, WA",confirmed,21
+2020-03-04,"King County, WA",confirmed,31
+2020-03-05,"King County, WA",confirmed,51
+2020-03-06,"King County, WA",confirmed,58
+2020-03-07,"King County, WA",confirmed,71
+2020-03-08,"King County, WA",confirmed,83
+2020-03-09,"King County, WA",confirmed,83
+2020-01-24,"Cook County, IL",confirmed,1
+2020-01-25,"Cook County, IL",confirmed,1
+2020-01-26,"Cook County, IL",confirmed,1
+2020-01-27,"Cook County, IL",confirmed,1
+2020-01-28,"Cook County, IL",confirmed,1
+2020-01-29,"Cook County, IL",confirmed,1
+2020-01-30,"Cook County, IL",confirmed,1
+2020-01-31,"Cook County, IL",confirmed,2
+2020-02-01,"Cook County, IL",confirmed,2
+2020-02-02,"Cook County, IL",confirmed,2
+2020-02-03,"Cook County, IL",confirmed,2
+2020-02-04,"Cook County, IL",confirmed,2
+2020-02-05,"Cook County, IL",confirmed,2
+2020-02-06,"Cook County, IL",confirmed,2
+2020-02-07,"Cook County, IL",confirmed,2
+2020-02-08,"Cook County, IL",confirmed,2
+2020-02-09,"Cook County, IL",confirmed,2
+2020-02-10,"Cook County, IL",confirmed,2
+2020-02-11,"Cook County, IL",confirmed,2
+2020-02-12,"Cook County, IL",confirmed,2
+2020-02-13,"Cook County, IL",confirmed,2
+2020-02-14,"Cook County, IL",confirmed,2
+2020-02-15,"Cook County, IL",confirmed,2
+2020-02-16,"Cook County, IL",confirmed,2
+2020-02-17,"Cook County, IL",confirmed,2
+2020-02-18,"Cook County, IL",confirmed,2
+2020-02-19,"Cook County, IL",confirmed,2
+2020-02-20,"Cook County, IL",confirmed,2
+2020-02-21,"Cook County, IL",confirmed,2
+2020-02-22,"Cook County, IL",confirmed,2
+2020-02-23,"Cook County, IL",confirmed,2
+2020-02-24,"Cook County, IL",confirmed,2
+2020-02-25,"Cook County, IL",confirmed,2
+2020-02-26,"Cook County, IL",confirmed,2
+2020-02-27,"Cook County, IL",confirmed,2
+2020-02-28,"Cook County, IL",confirmed,2
+2020-02-29,"Cook County, IL",confirmed,2
+2020-03-01,"Cook County, IL",confirmed,3
+2020-03-02,"Cook County, IL",confirmed,4
+2020-03-03,"Cook County, IL",confirmed,4
+2020-03-04,"Cook County, IL",confirmed,4
+2020-03-05,"Cook County, IL",confirmed,5
+2020-03-06,"Cook County, IL",confirmed,5
+2020-03-07,"Cook County, IL",confirmed,6
+2020-03-08,"Cook County, IL",confirmed,7
+2020-03-09,"Cook County, IL",confirmed,7
+2020-03-13,Alabama,confirmed,5
+2020-03-14,Alabama,confirmed,6
+2020-03-15,Alabama,confirmed,12
+2020-03-16,Alabama,confirmed,29
+2020-03-17,Alabama,confirmed,39
+2020-03-18,Alabama,confirmed,46
+2020-03-19,Alabama,confirmed,78
+2020-03-20,Alabama,confirmed,83
+2020-03-21,Alabama,confirmed,131
+2020-03-22,Alabama,confirmed,138
+2020-03-14,Puerto Rico,confirmed,3
+2020-03-15,Puerto Rico,confirmed,5
+2020-03-16,Puerto Rico,confirmed,5
+2020-03-17,Puerto Rico,confirmed,5
+2020-03-18,Puerto Rico,confirmed,5
+2020-03-19,Puerto Rico,confirmed,5
+2020-03-20,Puerto Rico,confirmed,14
+2020-03-21,Puerto Rico,confirmed,21
+2020-03-22,Puerto Rico,confirmed,23
+2020-03-15,Guam,confirmed,3
+2020-03-16,Guam,confirmed,3
+2020-03-17,Guam,confirmed,3
+2020-03-18,Guam,confirmed,5
+2020-03-19,Guam,confirmed,12
+2020-03-20,Guam,confirmed,14
+2020-03-21,Guam,confirmed,15
+2020-03-22,Guam,confirmed,27
+2020-03-14,Virgin Islands,confirmed,1
+2020-03-15,Virgin Islands,confirmed,1
+2020-03-16,Virgin Islands,confirmed,1
+2020-03-17,Virgin Islands,confirmed,2
+2020-03-18,Virgin Islands,confirmed,2
+2020-03-19,Virgin Islands,confirmed,3
+2020-03-20,Virgin Islands,confirmed,3
+2020-03-21,Virgin Islands,confirmed,3
+2020-03-22,Virgin Islands,confirmed,3
+2020-03-10,Washington,deaths,23
+2020-03-11,Washington,deaths,29
+2020-03-12,Washington,deaths,31
+2020-03-13,Washington,deaths,37
+2020-03-14,Washington,deaths,37
+2020-03-15,Washington,deaths,40
+2020-03-16,Washington,deaths,48
+2020-03-17,Washington,deaths,55
+2020-03-18,Washington,deaths,55
+2020-03-19,Washington,deaths,74
+2020-03-20,Washington,deaths,83
+2020-03-21,Washington,deaths,94
+2020-03-22,Washington,deaths,95
+2020-03-14,New York,deaths,2
+2020-03-15,New York,deaths,3
+2020-03-16,New York,deaths,10
+2020-03-17,New York,deaths,13
+2020-03-18,New York,deaths,16
+2020-03-19,New York,deaths,34
+2020-03-20,New York,deaths,42
+2020-03-21,New York,deaths,60
+2020-03-22,New York,deaths,117
+2020-03-10,California,deaths,2
+2020-03-11,California,deaths,3
+2020-03-12,California,deaths,4
+2020-03-13,California,deaths,4
+2020-03-14,California,deaths,5
+2020-03-15,California,deaths,6
+2020-03-16,California,deaths,7
+2020-03-17,California,deaths,12
+2020-03-18,California,deaths,13
+2020-03-19,California,deaths,18
+2020-03-20,California,deaths,23
+2020-03-21,California,deaths,24
+2020-03-22,California,deaths,30
+2020-03-20,Massachusetts,deaths,1
+2020-03-21,Massachusetts,deaths,1
+2020-03-22,Massachusetts,deaths,5
+2020-03-22,Grand Princess,deaths,1
+2020-03-12,Georgia,deaths,1
+2020-03-13,Georgia,deaths,1
+2020-03-14,Georgia,deaths,1
+2020-03-15,Georgia,deaths,1
+2020-03-16,Georgia,deaths,1
+2020-03-17,Georgia,deaths,1
+2020-03-18,Georgia,deaths,3
+2020-03-19,Georgia,deaths,10
+2020-03-20,Georgia,deaths,13
+2020-03-21,Georgia,deaths,14
+2020-03-22,Georgia,deaths,23
+2020-03-14,Colorado,deaths,1
+2020-03-15,Colorado,deaths,1
+2020-03-16,Colorado,deaths,1
+2020-03-17,Colorado,deaths,2
+2020-03-18,Colorado,deaths,2
+2020-03-19,Colorado,deaths,4
+2020-03-20,Colorado,deaths,4
+2020-03-21,Colorado,deaths,4
+2020-03-22,Colorado,deaths,6
+2020-03-10,Florida,deaths,2
+2020-03-11,Florida,deaths,2
+2020-03-12,Florida,deaths,2
+2020-03-13,Florida,deaths,2
+2020-03-14,Florida,deaths,3
+2020-03-15,Florida,deaths,4
+2020-03-16,Florida,deaths,5
+2020-03-17,Florida,deaths,6
+2020-03-18,Florida,deaths,7
+2020-03-19,Florida,deaths,9
+2020-03-20,Florida,deaths,10
+2020-03-21,Florida,deaths,13
+2020-03-22,Florida,deaths,13
+2020-03-10,New Jersey,deaths,1
+2020-03-11,New Jersey,deaths,1
+2020-03-12,New Jersey,deaths,1
+2020-03-13,New Jersey,deaths,1
+2020-03-14,New Jersey,deaths,1
+2020-03-15,New Jersey,deaths,2
+2020-03-16,New Jersey,deaths,2
+2020-03-17,New Jersey,deaths,3
+2020-03-18,New Jersey,deaths,3
+2020-03-19,New Jersey,deaths,9
+2020-03-20,New Jersey,deaths,11
+2020-03-21,New Jersey,deaths,16
+2020-03-22,New Jersey,deaths,20
+2020-03-15,Oregon,deaths,1
+2020-03-16,Oregon,deaths,1
+2020-03-17,Oregon,deaths,1
+2020-03-18,Oregon,deaths,2
+2020-03-19,Oregon,deaths,3
+2020-03-20,Oregon,deaths,3
+2020-03-21,Oregon,deaths,5
+2020-03-22,Oregon,deaths,4
+2020-03-17,Texas,deaths,1
+2020-03-18,Texas,deaths,3
+2020-03-19,Texas,deaths,5
+2020-03-20,Texas,deaths,5
+2020-03-21,Texas,deaths,5
+2020-03-22,Texas,deaths,6
+2020-03-17,Illinois,deaths,1
+2020-03-18,Illinois,deaths,1
+2020-03-19,Illinois,deaths,4
+2020-03-20,Illinois,deaths,5
+2020-03-21,Illinois,deaths,6
+2020-03-22,Illinois,deaths,9
+2020-03-19,Pennsylvania,deaths,1
+2020-03-20,Pennsylvania,deaths,1
+2020-03-21,Pennsylvania,deaths,2
+2020-03-22,Pennsylvania,deaths,3
+2020-03-19,Maryland,deaths,1
+2020-03-20,Maryland,deaths,1
+2020-03-21,Maryland,deaths,2
+2020-03-22,Maryland,deaths,3
+2020-03-16,South Carolina,deaths,1
+2020-03-17,South Carolina,deaths,1
+2020-03-18,South Carolina,deaths,1
+2020-03-19,South Carolina,deaths,1
+2020-03-20,South Carolina,deaths,1
+2020-03-21,South Carolina,deaths,3
+2020-03-22,South Carolina,deaths,3
+2020-03-21,Tennessee,deaths,1
+2020-03-22,Tennessee,deaths,2
+2020-03-14,Virginia,deaths,1
+2020-03-15,Virginia,deaths,1
+2020-03-16,Virginia,deaths,1
+2020-03-17,Virginia,deaths,2
+2020-03-18,Virginia,deaths,2
+2020-03-19,Virginia,deaths,2
+2020-03-20,Virginia,deaths,2
+2020-03-21,Virginia,deaths,2
+2020-03-22,Virginia,deaths,6
+2020-03-21,Arizona,deaths,1
+2020-03-22,Arizona,deaths,2
+2020-03-16,Indiana,deaths,1
+2020-03-17,Indiana,deaths,2
+2020-03-18,Indiana,deaths,2
+2020-03-19,Indiana,deaths,2
+2020-03-20,Indiana,deaths,2
+2020-03-21,Indiana,deaths,4
+2020-03-22,Indiana,deaths,6
+2020-03-16,Kentucky,deaths,1
+2020-03-17,Kentucky,deaths,1
+2020-03-18,Kentucky,deaths,1
+2020-03-19,Kentucky,deaths,2
+2020-03-20,Kentucky,deaths,2
+2020-03-21,Kentucky,deaths,3
+2020-03-22,Kentucky,deaths,3
+2020-03-20,District of Columbia,deaths,1
+2020-03-21,District of Columbia,deaths,1
+2020-03-22,District of Columbia,deaths,2
+2020-03-16,Nevada,deaths,1
+2020-03-17,Nevada,deaths,1
+2020-03-18,Nevada,deaths,1
+2020-03-19,Nevada,deaths,1
+2020-03-20,Nevada,deaths,1
+2020-03-21,Nevada,deaths,2
+2020-03-22,Nevada,deaths,2
+2020-03-21,Minnesota,deaths,1
+2020-03-22,Minnesota,deaths,1
+2020-03-20,Ohio,deaths,2
+2020-03-21,Ohio,deaths,3
+2020-03-22,Ohio,deaths,3
+2020-03-20,Wisconsin,deaths,3
+2020-03-21,Wisconsin,deaths,4
+2020-03-22,Wisconsin,deaths,4
+2020-03-19,Connecticut,deaths,2
+2020-03-20,Connecticut,deaths,3
+2020-03-21,Connecticut,deaths,4
+2020-03-22,Connecticut,deaths,5
+2020-03-19,Oklahoma,deaths,1
+2020-03-20,Oklahoma,deaths,1
+2020-03-21,Oklahoma,deaths,1
+2020-03-22,Oklahoma,deaths,2
+2020-03-22,Utah,deaths,1
+2020-03-13,Kansas,deaths,1
+2020-03-14,Kansas,deaths,1
+2020-03-15,Kansas,deaths,1
+2020-03-16,Kansas,deaths,1
+2020-03-17,Kansas,deaths,1
+2020-03-18,Kansas,deaths,1
+2020-03-19,Kansas,deaths,1
+2020-03-20,Kansas,deaths,1
+2020-03-21,Kansas,deaths,2
+2020-03-22,Kansas,deaths,2
+2020-03-14,Louisiana,deaths,1
+2020-03-15,Louisiana,deaths,2
+2020-03-16,Louisiana,deaths,3
+2020-03-17,Louisiana,deaths,4
+2020-03-18,Louisiana,deaths,4
+2020-03-19,Louisiana,deaths,10
+2020-03-20,Louisiana,deaths,14
+2020-03-21,Louisiana,deaths,16
+2020-03-22,Louisiana,deaths,20
+2020-03-19,Missouri,deaths,1
+2020-03-20,Missouri,deaths,2
+2020-03-21,Missouri,deaths,3
+2020-03-22,Missouri,deaths,3
+2020-03-20,Vermont,deaths,2
+2020-03-21,Vermont,deaths,2
+2020-03-22,Vermont,deaths,2
+2020-03-19,Michigan,deaths,3
+2020-03-20,Michigan,deaths,3
+2020-03-21,Michigan,deaths,5
+2020-03-22,Michigan,deaths,9
+2020-03-19,Mississippi,deaths,1
+2020-03-20,Mississippi,deaths,1
+2020-03-21,Mississippi,deaths,1
+2020-03-22,Mississippi,deaths,1
+2020-03-11,South Dakota,deaths,1
+2020-03-12,South Dakota,deaths,1
+2020-03-13,South Dakota,deaths,1
+2020-03-14,South Dakota,deaths,1
+2020-03-15,South Dakota,deaths,1
+2020-03-16,South Dakota,deaths,1
+2020-03-17,South Dakota,deaths,1
+2020-03-18,South Dakota,deaths,1
+2020-03-19,South Dakota,deaths,1
+2020-03-20,South Dakota,deaths,1
+2020-03-21,South Dakota,deaths,1
+2020-03-22,South Dakota,deaths,1
+2020-03-08,"Lee County, FL",deaths,1
+2020-03-09,"Lee County, FL",deaths,1
+2020-03-09,"Grant County, WA",deaths,1
+2020-03-08,"Santa Rosa County, FL",deaths,1
+2020-03-09,"Santa Rosa County, FL",deaths,1
+2020-03-04,"Placer County, CA",deaths,1
+2020-03-05,"Placer County, CA",deaths,1
+2020-03-06,"Placer County, CA",deaths,1
+2020-03-07,"Placer County, CA",deaths,1
+2020-03-08,"Placer County, CA",deaths,1
+2020-03-09,"Placer County, CA",deaths,1
+2020-03-02,"Snohomish County, WA",deaths,1
+2020-03-03,"Snohomish County, WA",deaths,1
+2020-03-04,"Snohomish County, WA",deaths,1
+2020-03-05,"Snohomish County, WA",deaths,1
+2020-03-06,"Snohomish County, WA",deaths,1
+2020-03-07,"Snohomish County, WA",deaths,1
+2020-03-08,"Snohomish County, WA",deaths,1
+2020-03-09,"Snohomish County, WA",deaths,1
+2020-02-29,"King County, WA",deaths,1
+2020-03-01,"King County, WA",deaths,1
+2020-03-02,"King County, WA",deaths,5
+2020-03-03,"King County, WA",deaths,6
+2020-03-04,"King County, WA",deaths,9
+2020-03-05,"King County, WA",deaths,10
+2020-03-06,"King County, WA",deaths,12
+2020-03-07,"King County, WA",deaths,15
+2020-03-08,"King County, WA",deaths,17
+2020-03-09,"King County, WA",deaths,17
+2020-03-21,Puerto Rico,deaths,1
+2020-03-22,Puerto Rico,deaths,1
+2020-03-22,Guam,deaths,1
+2020-01-22,US,confirmed,1
+2020-01-23,US,confirmed,1
+2020-01-24,US,confirmed,2
+2020-01-25,US,confirmed,2
+2020-01-26,US,confirmed,5
+2020-01-27,US,confirmed,5
+2020-01-28,US,confirmed,5
+2020-01-29,US,confirmed,5
+2020-01-30,US,confirmed,5
+2020-01-31,US,confirmed,7
+2020-02-01,US,confirmed,8
+2020-02-02,US,confirmed,8
+2020-02-03,US,confirmed,11
+2020-02-04,US,confirmed,11
+2020-02-05,US,confirmed,11
+2020-02-06,US,confirmed,11
+2020-02-07,US,confirmed,11
+2020-02-08,US,confirmed,11
+2020-02-09,US,confirmed,11
+2020-02-10,US,confirmed,11
+2020-02-11,US,confirmed,12
+2020-02-12,US,confirmed,12
+2020-02-13,US,confirmed,13
+2020-02-14,US,confirmed,13
+2020-02-15,US,confirmed,13
+2020-02-16,US,confirmed,13
+2020-02-17,US,confirmed,13
+2020-02-18,US,confirmed,13
+2020-02-19,US,confirmed,13
+2020-02-20,US,confirmed,13
+2020-02-21,US,confirmed,15
+2020-02-22,US,confirmed,15
+2020-02-23,US,confirmed,15
+2020-02-24,US,confirmed,51
+2020-02-25,US,confirmed,51
+2020-02-26,US,confirmed,57
+2020-02-27,US,confirmed,58
+2020-02-28,US,confirmed,60
+2020-02-29,US,confirmed,68
+2020-03-01,US,confirmed,74
+2020-03-02,US,confirmed,98
+2020-03-03,US,confirmed,118
+2020-03-04,US,confirmed,149
+2020-03-05,US,confirmed,217
+2020-03-06,US,confirmed,262
+2020-03-07,US,confirmed,402
+2020-03-08,US,confirmed,518
+2020-03-09,US,confirmed,583
+2020-03-10,US,confirmed,959
+2020-03-11,US,confirmed,1281
+2020-03-12,US,confirmed,1663
+2020-03-13,US,confirmed,2179
+2020-03-14,US,confirmed,2727
+2020-03-15,US,confirmed,3499
+2020-03-16,US,confirmed,4632
+2020-03-17,US,confirmed,6421
+2020-03-18,US,confirmed,7783
+2020-03-19,US,confirmed,13677
+2020-03-20,US,confirmed,19100
+2020-03-21,US,confirmed,25489
+2020-03-22,US,confirmed,33272
+2020-02-29,US,deaths,1
+2020-03-01,US,deaths,1
+2020-03-02,US,deaths,6
+2020-03-03,US,deaths,7
+2020-03-04,US,deaths,11
+2020-03-05,US,deaths,12
+2020-03-06,US,deaths,14
+2020-03-07,US,deaths,17
+2020-03-08,US,deaths,21
+2020-03-09,US,deaths,22
+2020-03-10,US,deaths,28
+2020-03-11,US,deaths,36
+2020-03-12,US,deaths,40
+2020-03-13,US,deaths,47
+2020-03-14,US,deaths,54
+2020-03-15,US,deaths,63
+2020-03-16,US,deaths,85
+2020-03-17,US,deaths,108
+2020-03-18,US,deaths,118
+2020-03-19,US,deaths,200
+2020-03-20,US,deaths,244
+2020-03-21,US,deaths,307
+2020-03-22,US,deaths,417

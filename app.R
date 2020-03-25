@@ -1,6 +1,6 @@
 # Claudio Zanettini
 
-source("other_f.R")
+source("other/other_f.R")
 
 ui <- dashboardPage(
   dashboardHeader(
@@ -102,7 +102,8 @@ server <- function(input, output, session) {
   dat_f <- reactive({
     x <- input$imp_state
     dat_US %>%
-      filter(state %in% x)
+      filter(state %in% x) %>% 
+      filter(date <= "2020-03-22") # they are not updating the states anymore
   })
   
   dat_m <- reactive({

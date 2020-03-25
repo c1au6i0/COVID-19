@@ -1,3 +1,4 @@
+# libraries --------
 library(DT)
 library(ggiraph)
 library(ggridges)
@@ -6,6 +7,7 @@ library(htmltools)
 library(htmlwidgets)
 library(janitor)
 library(leaflet)
+library(lubridate)
 library(lemon)
 library(plotly)
 library(shiny)
@@ -25,40 +27,50 @@ library(vroom)
 
 states_abr <- vroom::vroom("other/states.csv")
 states <- states_abr$state
+states_geoloc <- vroom::vroom("other/geoloc.csv")
 
-get_cases <- function() {
-  COVID <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-"
-  dat <- map_dfr(list("Confirmed", "Deaths", "Recovered"), function(x) {
-    url_dat <- paste(COVID, x, ".csv", sep = "")
-    dat <- vroom(file = url_dat)
-    dat <- add_column(dat, condition = x, .before = 1)
-    dat
-  })
+old_series <- vroom::vroom("other/us_series.csv")
 
-  # Clean data -
-  dat_US <- dat %>%
-    rename(state = `Province/State`, country = `Country/Region`) %>%
-    filter(country %in% "US") %>%
-    pivot_longer(6:ncol(dat), names_to = "date", values_to = "cases") %>%
-    mutate(date = lubridate::mdy(date))
 
-  dat_US[dat_US == 0] <- NA
 
-  dat_US <- na.omit(dat_US)
+# FUNCTIONS -------------------
 
-  # tot by day in US
-  all_US <- dat_US %>%
-    group_by(condition, date) %>%
-    summarize(cases = sum(cases, na.rm = TRUE)) %>%
-    mutate(state = "US", country = "US", Lat = 38.9, Long = -77.00)
+# daily cases in US new data structure --------
+
+get_daily_cases <- function(){
   
-
-  all_US <- all_US[, names(dat_US)]
-
-  dat_US <- bind_rows(dat_US, all_US)
-
-  dat_US
+  # 2020-03-22 last day of U.S series with old data structure
+  
+  git_daily <- xml2::read_html("https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports")
+  name_daily <- git_daily %>%
+    rvest::html_nodes("table") %>%
+    rvest::html_table() %>%
+    data.frame()
+  
+  # find all the files created after change in data structure 03-22-2020
+  date_import <- str_extract(name_daily$Name, pattern = "[0-9].*") %>% 
+    tibble() %>% 
+    na.omit() %>% 
+    rename(date = 1) %>% 
+    mutate(date =  mdy(str_remove(date, ".csv"))) %>% 
+    filter(date > mdy("03-22-2020"))
+  
+  raw_path <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/"
+  dat_US <- map_dfr(strftime(date_import$date, "%m-%d-%Y"), function (x){
+    url_dat <- paste0(raw_path, x, ".csv")
+    dat <- vroom(file = url_dat)
+    dat
+  }) %>% 
+    clean_names()
+  
+  dat_US %>% 
+    filter(country_region == "US") %>% 
+    group_by(last_update, province_state) %>% 
+    summarise(confirmed = sum(confirmed), deaths = sum(deaths)) %>% 
+    rename(date = last_update, state = province_state) %>% 
+    pivot_longer(3:4, "condition", values_to = "cases")
 }
+
 
 get_tests <- function() {
   # Get number of tests -----
@@ -71,7 +83,7 @@ get_tests <- function() {
     data.frame() %>%
     clean_names() %>%
     mutate(date_collected = lubridate::mdy(paste0(date_collected, "/2020"))) %>%
-    mutate(cdc_labs = as.numeric(str_extract(cdc_labs, "[1-9]"))) %>% 
+    # mutate(cdc_labs = as.numeric(str_extract(cdc_labs, "[1-9]"))) %>% 
     pivot_longer(2:3, names_to = "lab_type", values_to = "n") %>%
     mutate(n = as.numeric(n)) %>%
     na.omit()
@@ -133,7 +145,7 @@ plot_tested <- function(dat = tests, log_scale = FALSE) {
 
 cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 
-
+# old time_series
 plot_cases <- function(dat, log_scale = FALSE) {
   if (nrow(dat) > 0) {
     # shapes of symbols
@@ -204,9 +216,7 @@ plot_cases <- function(dat, log_scale = FALSE) {
 }
 
 
-# MAP ------
-
-# state_abb -----
+# MAP graph------
 
 map_leaf <- function(dat, sel = NULL) {
     if (nrow(dat) != 0) {
@@ -246,3 +256,55 @@ map_leaf <- function(dat, sel = NULL) {
     }
 }
 # https://stackoverflow.com/questions/42276220/clear-leaflet-markers-in-shiny-app-with-slider-barhttps://stackoverflow.com/questions/42276220/clear-leaflet-markers-in-shiny-app-with-slider-bar
+
+
+# TIME SERIES before change in data structure ----------------------------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# in date 2020-03-22 the data structure in JHU repository was change. This was the function to get the data.
+# data obtained before 2020-03-22 have been saved in a csv file that is merged with data obtained daily with function: get_daily_cases
+# ------------------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# 
+# get_old_times <- function() {
+#   COVID <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-"
+#   dat <- map_dfr(list("Confirmed", "Deaths", "Recovered"), function(x) {
+#     url_dat <- paste(COVID, x, ".csv", sep = "")
+#     dat <- vroom(file = url_dat)
+#     dat <- add_column(dat, condition = x, .before = 1)
+#     dat
+#   })
+#   
+#   # Clean data -
+#   dat_US <- dat %>%
+#     rename(state = `Province/State`, country = `Country/Region`) %>%
+#     filter(country %in% "US") %>%
+#     pivot_longer(6:ncol(dat), names_to = "date", values_to = "cases") %>%
+#     mutate(date = lubridate::mdy(date))
+#   
+#   dat_US[dat_US == 0] <- NA
+#   
+#   dat_US <- na.omit(dat_US)
+#   
+#   # tot by day in US
+#   all_US <- dat_US %>%
+#     group_by(condition, date) %>%
+#     summarize(cases = sum(cases, na.rm = TRUE)) %>%
+#     mutate(state = "US", country = "US", Lat = 38.9, Long = -77.00)
+#   
+#   
+#   all_US <- all_US[, names(dat_US)]
+#   
+#   dat_US <- bind_rows(dat_US, all_US)
+#   
+#   dat_US
+# }
+# 
+# # This is how I got the data.
+# series_old_struct <- get_old_times() %>% 
+#   select(names(y)) %>% 
+#   filter(date <= "2020-03-22", condition != "Recovered") %>%   # they are not updating the states anymore
+#   mutate(condition = tolower(condition))
+# 
+# write.csv(series_old_struct, "us_series.csv")
+  
+
+
+
