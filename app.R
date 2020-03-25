@@ -51,9 +51,8 @@ ui <- dashboardPage(
                          selectizeInput(
                                 inputId = "map",
                                 label = NULL,
-                                choices = c("Confirmed",
-                                            "Deaths",
-                                            "Recovered"),
+                                choices = c("confirmed",
+                                            "deaths"),
                                 selected = "Confirmed",
                                 
                                 width = "100%"
@@ -89,12 +88,6 @@ server <- function(input, output, session) {
   
   # # Get data -----
   
-  
-  dat_US <- get_cases()
-  tests <- get_tests()
-  
-  
-  
   dat_f <- reactiveVal(NULL)
   dat_m <- reactiveVal(NULL)
   
@@ -102,8 +95,7 @@ server <- function(input, output, session) {
   dat_f <- reactive({
     x <- input$imp_state
     dat_US %>%
-      filter(state %in% x) %>% 
-      filter(date <= "2020-03-22") # they are not updating the states anymore
+      filter(state %in% x)  
   })
   
   dat_m <- reactive({

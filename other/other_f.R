@@ -25,13 +25,21 @@ library(vroom)
 
 # Get data ------
 
+# states abbreviations are not used at this time
 states_abr <- vroom::vroom("other/states.csv")
+
 states <- states_abr$state
 states_geoloc <- vroom::vroom("other/geoloc.csv")
 
 old_series <- vroom::vroom("other/us_series.csv")
 
+dat_US <- rbind(old_series, new_cases) %>% 
+  filter(state %in% states) # in the U.S territories they include Amercan Samoa, "Northern Mariana Islands", "Virgin Islands" ,"Wuhan Evacuee", "Recovered"  
 
+
+dat_US <- inner_join(dat_US, states_geoloc, by = "state")
+
+tests <- get_tests()
 
 # FUNCTIONS -------------------
 
@@ -68,7 +76,9 @@ get_daily_cases <- function(){
     group_by(last_update, province_state) %>% 
     summarise(confirmed = sum(confirmed), deaths = sum(deaths)) %>% 
     rename(date = last_update, state = province_state) %>% 
-    pivot_longer(3:4, "condition", values_to = "cases")
+    pivot_longer(3:4, "condition", values_to = "cases") %>% 
+    ungroup(date) %>% 
+    mutate(date = strftime(date, "%Y-%m-%d"))
 }
 
 
@@ -145,7 +155,7 @@ plot_tested <- function(dat = tests, log_scale = FALSE) {
 
 cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 
-# old time_series
+
 plot_cases <- function(dat, log_scale = FALSE) {
   if (nrow(dat) > 0) {
     # shapes of symbols
@@ -238,7 +248,7 @@ map_leaf <- function(dat, sel = NULL) {
         # }
     
     dat <- dat %>%
-      group_by(condition, state, country, Lat, Long) %>% 
+      group_by(condition, state, Lat, Long) %>% 
       summarise(max = max(cases))
     
     # Probably not the most elegant solution
