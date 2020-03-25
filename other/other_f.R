@@ -21,28 +21,6 @@ library(scales)
 library(vroom)
 
 
-
-# Get data ------
-
-# states abbreviations are not used at this time
-states_abr <- vroom::vroom("other/states.csv")
-
-states <- states_abr$state
-states_geoloc <- vroom::vroom("other/geoloc.csv")
-
-old_series <- vroom::vroom("other/us_series.csv") %>% 
-                select(date:cases)
-
-
-new_cases <- get_daily_cases()
-dat_US <- rbind(old_series, new_cases) %>% 
-  filter(state %in% states) # in the U.S territories they include Amercan Samoa, "Northern Mariana Islands", "Virgin Islands" ,"Wuhan Evacuee", "Recovered"  
-
-
-dat_US <- inner_join(dat_US, states_geoloc, by = "state")
-
-tests <- get_tests()
-
 # FUNCTIONS -------------------
 
 # daily cases in US new data structure --------
@@ -271,12 +249,6 @@ map_leaf <- function(dat, sel = NULL) {
 # https://stackoverflow.com/questions/42276220/clear-leaflet-markers-in-shiny-app-with-slider-barhttps://stackoverflow.com/questions/42276220/clear-leaflet-markers-in-shiny-app-with-slider-bar
 
 
-dat_US %>% 
-  filter(state == "Maryland") %>% 
-  plot_cases()
-
-
-
 
 # TIME SERIES before change in data structure ----------------------------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # in date 2020-03-22 the data structure in JHU repository was change. This was the function to get the data.
@@ -325,6 +297,3 @@ dat_US %>%
 # 
 # write.csv(series_old_struct, "us_series.csv")
   
-
-
-

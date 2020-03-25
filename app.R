@@ -2,6 +2,29 @@
 
 source("other/other_f.R")
 
+# Get data ------
+
+# states abbreviations are not used at this time
+states_abr <- vroom::vroom("other/states.csv")
+
+states <- states_abr$state
+states_geoloc <- vroom::vroom("other/geoloc.csv")
+
+old_series <- vroom::vroom("other/us_series.csv") %>% 
+  select(date:cases)
+
+
+new_cases <- get_daily_cases()
+
+dat_US <- rbind(old_series, new_cases) %>% 
+  filter(state %in% states) # in the U.S territories they include Amercan Samoa, "Northern Mariana Islands", "Virgin Islands" ,"Wuhan Evacuee", "Recovered"  
+
+
+dat_US <- inner_join(dat_US, states_geoloc, by = "state")
+
+tests <- get_tests()
+
+
 ui <- dashboardPage(
   dashboardHeader(
     title = "COVID-19",
