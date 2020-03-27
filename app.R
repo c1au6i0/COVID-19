@@ -22,6 +22,15 @@ dat_US <- rbind(old_series, new_cases) %>%
 
 dat_US <- inner_join(dat_US, states_geoloc, by = "state")
 
+US <- dat_US %>% 
+  group_by(date, condition) %>% 
+  summarize(cases = sum(cases)) %>% 
+  mutate(state = "US", Lat = 38.9, Long = -77.0) %>% 
+  select(names(dat_US)) %>% 
+  ungroup()
+
+dat_US <- bind_rows(US, dat_US)
+
 tests <- get_tests()
 
 
@@ -58,7 +67,7 @@ ui <- dashboardPage(
         selectizeInput(
           inputId = "imp_state",
           label = "Select one or more States (max 4):",
-          choices = as.character(states),
+          choices = as.character(c("US", states)),
           selected = c("Maryland"),
           multiple = TRUE,
           options = list(maxItems = 4),
@@ -76,7 +85,7 @@ ui <- dashboardPage(
                                 label = NULL,
                                 choices = c("confirmed",
                                             "deaths"),
-                                selected = "Confirmed",
+                                selected = "confirmed",
                                 
                                 width = "100%"
                                 
