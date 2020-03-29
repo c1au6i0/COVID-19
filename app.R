@@ -115,7 +115,7 @@ ui <- dashboardPage(
 
 # Define server logic required to draw a histogram
 server <- function(input, output, session) {
-  
+  options(scipen = 999)
   session$onSessionEnded(stopApp)
   
   # # Get data -----
