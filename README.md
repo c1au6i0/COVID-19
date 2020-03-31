@@ -2,7 +2,7 @@
 # covid-19
 
 A Shiny App, hosted [here](https://rden.shinyapps.io/covid-19/), **to
-monitor the trends of COVID-19 confirmed cases, deaths and recovered in
+monitor the trends of COVID-19 confirmed and deaths cases in
 each U.S. state** and the **number of specimens tested for COVID-19 in
 all U.S**. Data are updated daily.
 
