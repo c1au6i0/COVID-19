@@ -44,9 +44,24 @@ get_daily_cases <- function(){
     filter(date > mdy("03-22-2020"))
   
   raw_path <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/"
+  
   dat_US <- map_dfr(strftime(date_import$date, "%m-%d-%Y"), function (x){
     url_dat <- paste0(raw_path, x, ".csv")
-    dat <- vroom(file = url_dat)
+    dat <- vroom(file = url_dat, col_types = cols(
+      FIPS = col_character(),
+      Admin2 = col_character(),
+      Province_State = col_character(),
+      Country_Region = col_character(),
+      Last_Update = col_datetime(format = ""),
+      Lat = col_double(),
+      Long_ = col_double(),
+      Confirmed = col_double(),
+      Deaths = col_double(),
+      Recovered = col_double(),
+      Active = col_double(),
+      Combined_Key = col_character()
+    ))
+    message(x)
     dat
   }) %>% 
     clean_names()
