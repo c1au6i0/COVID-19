@@ -73,7 +73,8 @@ get_daily_cases <- function(){
     rename(date = last_update, state = province_state) %>% 
     pivot_longer(3:4, "condition", values_to = "cases") %>% 
     ungroup(date) %>% 
-    mutate(date = strftime(date, "%m-%d-%Y"))
+    mutate(date = strftime(date, "%m-%d-%Y")) %>% 
+    filter(!is.na(date))
 }
 
 
